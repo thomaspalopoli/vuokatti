@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <title>Make Admin Template Documentation</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../common-files/css/ui.css" rel="stylesheet">
+  </head>
+  <!-- BEGIN BODY -->
+  <body class="fixed-topbar fixed-sidebar">
+    <section>
+      <!-- BEGIN SIDEBAR -->
+      <div class="sidebar">
+        <div class="logopanel">
+          <h1>
+            <a href="intro.html"></a>
+          </h1>
+        </div>
+        <div class="sidebar-inner">
+          <ul class="nav nav-pills nav-stacked nav-sidebar">
+            <li><a href="intro.html"><i class="line-icon-home"></i><span>Introduction</span></a></li>
+            <li><a href="structure.html"><i class="line-icon-doc"></i><span>Structure</span></a></li>
+            <li><a href="one-page.html"><i class="line-icon-doc"></i><span>One Page</span></a></li>
+            <li class="nav-active active"><a href="builder.html"><i class="line-icon-puzzle"></i><span>Builder</span></a></li>
+            <li class="nav-parent">
+              <a href="#"><i class="line-icon-eye"></i><span><span>UI Elements</span></a>
+              <ul class="children collapse">
+                <li><a href="ui-buttons.html">Buttons</a></li>
+                <li><a href="ui-tabs.html">Tabs</a></li>
+                <li><a href="ui-icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="nav-parent">
+              <a href="#"><i class="line-icon-note"></i><span><span data-translate="Mailbox">Forms</span></a>
+              <ul class="children collapse">
+                <li><a href="form-layouts.html">Form Layouts</a></li>
+                <li><a href="form-elements.html">Form Elements</a></li>
+                <li><a href="form-input-text.html">Form Input Text</a></li>
+                <li><a href="form-wizard.html">Form Wizard</a></li>
+              </ul>
+            </li>
+            <li><a href="maps-google.html"><i class="line-icon-globe"></i><span>Google Maps</span></a></li>
+            <li><a href="tables.html"><i class="fa fa-table"></i><span>Tables</span></a></li>
+            <li><a href="plugins.html"><i class="line-icon-diamond"></i><span>Plugins</span></a></li>
+            <li><a href="customize.html"><i class="line-icon-pencil"></i><span>Customization</span></a></li>
+            <li><a href="credits.html"><i class="line-icon-grid"></i><span>Credits</span></a></li>
+            <li><a href="contact.html"><i class="line-icon-support"></i><span>Support</span></a></li>
+          </ul>
+          <div class="sidebar-footer clearfix">
+          <a class="btn btn-primary btn-block" href="mailto:support@themes-lab.com">Send us a Message</a>
+          </div>
+        </div>
+      </div>
+      <!-- END SIDEBAR -->
+      <div class="main-content">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content">
+          <div class="row">
+            <div class="col-md-8">
+              <h2 class="doc-title"><strong>Page</strong> Builder</h2>
+              <p>HTML Builder allows you to drag HTML elements onto a canvas and drop them where they'd like them to appear. Once dropped onto the canvas, the position can be changed by dragging and dropping as well. Elements can be delete individually or all elements on the current page can be deleted in one go.</p>
+              <p>It's an easy way to create new pages.</p>
+              <p>
+                <a class="btn btn-primary" href="../builder/index.html" target="_blank">Go to Page Builder</a>
+              </p>
+              <div class="alert alert-info media">
+                <div class="media-left">
+                  <i class="line-icon-bulb icon-circle"></i>
+                </div>
+                <div class="media-body width-100p">
+                  <h4 class="alert-title">Where are exported my built pages?</h4>
+                  <p>You will find your built pages inside your-custom-pages folder.</p>
+                </div>
+              </div>
+              <h3><strong>Style/detail</strong> editing</h3>
+              <p>The HTML Builder script also allows for basic CSS editing and link editing. Using the built-in CSS editor, end-users can customise whatever CSS attributes the script's admin has configured. When editing a link, the end-user can point the link to either an internal page or an (external) URL.</p>
+              <h3><strong>Submenu</strong> editing</h3>
+              <p>Submenu elements are not editable for the moment via builder since links are disable in builder to prevent redirect. You will be able to edit them direclty in Html page after exporting your page.</p>
+              <h3><strong>Link</strong> editing</h3>
+              <p>The HTML Builder script allows user to edit links as well. To be able to edit links, firstly the link selectors will need to be added to the "editableItems" array in the /js/builder.js file. To edit links on the canvas, firstly select the Details building mode, this will allow you to select links. When selected, a "link" tab will be visible in the left panel, allowing you to either choose a page to link to or enter a URL manually.</p>
+              <h3><strong>Linking</strong> within a single page</h3>
+              <p>When building a one-page website, you might want to link to sections within a single page rather then to a separate page. To do this, simply edit the link and use the second dropdown to choose the block you'd like to link to. The ID's to which can be linked, have to be configured within the block HTML files, and the ID attribute should be assigned to the first child element of the main container (for an example, please have a look at any of the bundled block files).</p>
+              <h3><strong>Image</strong> editing</h3>
+              <p>The HTML Builder script allows user to edit images as well. To be able to edit images, firstly the image selectors will need to be added to the "editableItems" array in the /js/builder.js file. To edit images on the canvas, firstly select the Details building mode, this will allow you to select images. When selected, a "image" tab will be visible in the left panel, allowing you to either upload an image or enter a URL manually.</p>
+              <h3><strong>Export</strong> HTML</h3>
+              <p>Whenever the user is happy with the final result, the created markup can be exported by click the blue export button. The export feature will grab all the used HTML elements for each created page and inserts these elements into a copy of the HTML skeleton file. Once all pages are completed, all the HTML files will be exported into your-custom-pages folder.</p>
+              <h3><strong>Pages</strong></h3>
+              <p>The HTML Builder script allows users to create multiple pages at once. To add a new page, simply click the green button labeled "+ Add" just below the current pages list. You can alter the page names as well (please use names with the .html extension, these are added automatically during the export). When exporting the markup, the pages will use the same names. To delete a page, simply click the little delete icon next to the page you'd like to delete.</p>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="copyright">
+              <p class="pull-left sm-pull-reset">
+                <span>Copyright <span class="copyright">©</span> 2015 </span>
+                <span>THEMES LAB</span>.
+                <span>All rights reserved. </span>
+              </p>
+              <p class="pull-right sm-pull-reset">
+                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT -->
+      </div>
+      <!-- END MAIN CONTENT -->
+    </section>
+    <!-- Preloader -->
+    <div class="loader-overlay">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a> 
+    <script src="../common-files/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="../common-files/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../common-files/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="../common-files/plugins/select2/select2.min.js"></script>
+    <script src="../common-files/plugins/icheck/icheck.min.js"></script>
+    <script src="../common-files/plugins/prettify/prettify.min.js"></script>
+    <script src="assets/js/application.js"></script>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+      prettyPrint();
+  });
+</script>

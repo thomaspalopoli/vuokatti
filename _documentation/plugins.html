@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <title>Make Admin Template Documentation</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../common-files/css/ui.css" rel="stylesheet">
+  </head>
+  <!-- BEGIN BODY -->
+  <body class="fixed-topbar fixed-sidebar">
+    <section>
+      <!-- BEGIN SIDEBAR -->
+      <div class="sidebar">
+        <div class="logopanel">
+          <h1>
+            <a href="intro.html"></a>
+          </h1>
+        </div>
+        <div class="sidebar-inner">
+          <ul class="nav nav-pills nav-stacked nav-sidebar">
+            <li><a href="intro.html"><i class="line-icon-home"></i><span>Introduction</span></a></li>
+            <li><a href="structure.html"><i class="line-icon-doc"></i><span>Structure</span></a></li>
+            <li><a href="one-page.html"><i class="line-icon-doc"></i><span>One Page</span></a></li>
+            <li><a href="builder.html"><i class="line-icon-puzzle"></i><span>Builder</span></a></li>
+            <li class="nav-parent">
+              <a href="#"><i class="line-icon-eye"></i><span><span>UI Elements</span></a>
+              <ul class="children collapse">
+                <li><a href="ui-buttons.html">Buttons</a></li>
+                <li><a href="ui-tabs.html">Tabs</a></li>
+                <li><a href="ui-icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="nav-parent">
+              <a href="#"><i class="line-icon-note"></i><span><span data-translate="Mailbox">Forms</span></a>
+              <ul class="children collapse">
+                <li><a href="form-layouts.html">Form Layouts</a></li>
+                <li><a href="form-elements.html">Form Elements</a></li>
+                <li><a href="form-input-text.html">Form Input Text</a></li>
+                <li><a href="form-wizard.html">Form Wizard</a></li>
+              </ul>
+            </li>
+            <li><a href="maps-google.html"><i class="line-icon-globe"></i><span>Google Maps</span></a></li>
+            <li><a href="tables.html"><i class="fa fa-table"></i><span>Tables</span></a></li>
+            <li class="nav-active active"><a href="plugins.html"><i class="line-icon-diamond"></i><span>Plugins</span></a></li>
+            <li><a href="customize.html"><i class="line-icon-pencil"></i><span>Customization</span></a></li>
+            <li><a href="credits.html"><i class="line-icon-grid"></i><span>Credits</span></a></li>
+            <li><a href="contact.html"><i class="line-icon-support"></i><span>Support</span></a></li>
+          </ul>
+          <div class="sidebar-footer clearfix">
+          <a class="btn btn-primary btn-block" href="mailto:support@themes-lab.com">Send us a Message</a>
+          </div>
+        </div>
+      </div>
+      <!-- END SIDEBAR -->
+      <div class="main-content">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content">
+          <div class="row" style="min-height:880px;">
+            <div class="col-md-8">
+              <h2 class="doc-title">Javascript <strong>Plugins</strong></h2>
+              <p>Here you will find a list of all plugins used in this template.</p>
+              <p>You will find a short description of the plugin, css and js file you have to include in order to make it works.</p>
+              <p>You will also find links to official plugin page and sometimes a link to demo pages.</p>
+              <h3>Select Plugin:</h3>
+              <select id="plugins-list" onchange="ShowPlugin();" style="min-width:300px">
+                <optgroup label="Forms">
+                  <option value="icheck">Icheck</option>
+                  <option value="select2">Select2</option>
+                  <option value="wizard">Form Wizard</option>
+                  <option value="b-dropdown">Bootstrap Dropdown</option>
+                  <option value="b-tags">Bootstrap Tags input</option>
+                </optgroup>
+                <optgroup label="Images">
+                  <option value="magnific">Magnific Popup</option>
+                  <option value="parallax">Parallax Effect</option>
+                  <option value="isotope">Isotope Sort &amp; Filter</option>
+                </optgroup>
+                <optgroup label="Sliders">
+                  <option value="slider-rev">Slider Revolution</option>
+                  <option value="slider-owl">Owl Carousel</option>
+                  <option value="slider-bx">BX Slider</option>
+                </optgroup>
+                <optgroup label="Others">
+                  <option value="appear">Appear</option>
+                  <option value="backstretch">Backstretch</option>
+                  <option value="b-dropdown-hover">Bootstrap Hover Dropdown</option>
+                  <option value="gmaps">Gmaps</option>
+                  <option value="rateit">Rateit</option>
+                  <option value="text-rotator">Text Rotator</option>
+                </optgroup>
+              </select>
+
+              <div id="icheck"  class="plugin plugin-active">
+                <h3>Icheck</h3>
+                <p>
+                  Custom checkbox and radio buttons.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link href=&quot;../../common-files/plugins/icheck/skins/all.css&quot;rel=&quot;stylesheet&quot;&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/icheck/icheck.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://fronteed.com/iCheck/" target="_blank">http://fronteed.com/iCheck</a>
+                <h4>Official Documentation</h4>
+                <a href="https://github.com/fronteed/iCheck" target="_blank">https://github.com/fronteed/iCheck</a>
+              </div>
+              <div id="select2"  class="plugin">
+                <h3>Select2</h3>
+                <p>
+                  Select2 gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link href=&quot;../../common-files/plugins/select2/select2.css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/select2/select2.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="https://select2.github.io/examples.html" target="_blank">https://select2.github.io/examples.html</a>
+                <h4>Official Documentation</h4>
+                <a href="https://select2.github.io/options.html" target="_blank">https://select2.github.io/options.html</a>
+              </div>
+              <div id="wizard" class="plugin">
+                <h3>Form Wizard</h3>
+                <p>
+                  This plugin can generate step navigation for your purpose. You can use it for registration, settings, introduction or presentation of your projects.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">&lt;link href=&quot;../../common-files/plugins/step-form-wizard/css/step-form-wizard.min.css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/step-form-wizard/js/step-form-wizard.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://ajoke.cz/wizard/examples" target="_blank">http://ajoke.cz/wizard/examples</a>
+                <h4>Official Documentation</h4>
+                <a href="http://ajoke.cz/wizard/documentation" target="_blank">http://ajoke.cz/wizard/documentation</a>
+              </div>
+              <div id="b-dropdown-hover" class="plugin">
+                <h3>Bootstrap Dropdown Hover</h3>
+                <p>
+                  Bootstrap dropdown activated on hover.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS file</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://cameronspear.com/demos/bootstrap-hover-dropdown/" target="_blank">http://cameronspear.com/demos/bootstrap-hover-dropdown</a>
+                <h4>Official Documentation</h4>
+                <a href="https://github.com/CWSpear/bootstrap-hover-dropdown" target="_blank">https://github.com/CWSpear/bootstrap-hover-dropdown</a>
+              </div>
+              <div id="b-dropdown" class="plugin">
+                <h3>Bootstrap Dropdown menu on hover</h3>
+                <p>
+                  An unofficial Bootstrap plugin to enable Bootstrap dropdowns to activate on hover and provide a nice user experience.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS File</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Official Documentation and Demo</h4>
+                <a href="https://github.com/CWSpear/bootstrap-hover-dropdown" target="_blank">https://github.com/CWSpear/bootstrap-hover-dropdown</a>
+              </div>
+
+              <div id="b-tags" class="plugin">
+                <h3>Bootstrap Tags Input</h3>
+                <p>
+                  jQuery tags input plugin based on Twitter Bootstrap.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS File</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/bootstrap-tags-input/bootstrap-tagsinput.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Official Documentation and demo</h4>
+                <a href="http://timschlechter.github.io/bootstrap-tagsinput/examples/" target="_blank">http://timschlechter.github.io/bootstrap-tagsinput/examples/</a>
+              </div>
+              <div id="magnific" class="plugin">
+                <h3>Magnific Popup</h3>
+                <p>
+                  Responsive lightbox &amp; dialog script with focus on performance and providing best experience for user with any device.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link href=&quot;../../common-files/plugins/magnific/magnific-popup.min.css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/magnific/jquery.magnific-popup.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">http://dimsemenov.com/plugins/magnific-popup</a>
+                <h4>Official Documentation</h4>
+                <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html" target="_blank">http://dimsemenov.com/plugins/magnific-popup/documentation.html</a>
+              </div>
+              <div id="parallax" class="plugin">
+                <h3>Parallax Effect</h3>
+                <p>
+                  jQuery Parallax is a script that simulates the parallax effect.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS file</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/parallax/scripts/jquery.parallax-1.1.3.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://ianlunn.co.uk/plugins/jquery-parallax/" target="_blank">http://ianlunn.co.uk/plugins/jquery-parallax/</a>
+                <h4>Official Documentation</h4>
+                <a href="https://github.com/IanLunn/jQuery-Parallax" target="_blank">https://github.com/IanLunn/jQuery-Parallax</a>
+              </div>
+              <div id="isotope" class="plugin">
+                <h3>Isotope: Gallery filter &amp; sort</h3>
+                <p>
+                  Filter &amp; sort magical layouts.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS file</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/parallax/scripts/jquery.parallax-1.1.3.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://isotope.metafizzy.co/" target="_blank">http://isotope.metafizzy.co/</a>
+                <h4>Official Documentation</h4>
+                <a href="https://github.com/metafizzy/isotope" target="_blank">https://github.com/metafizzy/isotope</a>
+              </div>
+
+              <div id="slider-rev" class="plugin">
+                <h3>Slider Revolution</h3>
+                <p>
+                  Turn simple HTML markup into a responsive(mobile friendly) or fullwidth slider with must-see-effects and meanwhile keep or build your SEO optimizatio
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../common-files/plugins/slider-revolution/examples/rs-plugin/css/settings.css&quot; media=&quot;screen&quot; /&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/slider-revolution/examples/rs-plugin/js/jquery.themepunch.tools.min.js&quot;&gt;&lt;/script&gt;   
+&lt;script src=&quot;../../common-files/plugins/slider-revolution/examples/rs-plugin/js/jquery.themepunch.revolution.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../../common-files/js/slider-revolution.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Official Documentation</h4>
+                <a href="http://revolution.themepunch.com/jquery" target="_blank">http://revolution.themepunch.com/jquery</a>
+              </div>
+              <div id="slider-owl" class="plugin">
+                <h3>Owl Carousel</h3>
+                <p>
+                  Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../common-files/plugins/owl/owl.carousel.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../common-files/plugins/owl/owl.theme.css&quot;&gt;
+                </pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/owl/owl.carousel.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://owlgraphic.com/owlcarousel/#demo" target="_blank">http://owlgraphic.com/owlcarousel/#demo</a>
+                <h4>Official Documentation</h4>
+                <a href="http://owlgraphic.com/owlcarousel/#how-to" target="_blank">http://owlgraphic.com/owlcarousel/#how-to</a>
+              </div>
+              <div id="slider-bx" class="plugin">
+                <h3>BX Slider</h3>
+                <p>
+                  Respsonsive jQuery content slider.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../common-files/plugins/bxslider/jquery.bxslider.css&quot; /&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/bxslider/jquery.bxslider.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://bxslider.com/examples" target="_blank">http://bxslider.com/examples</a>
+                <h4>Official Documentation</h4>
+                <a href="http://bxslider.com" target="_blank">http://bxslider.com</a>
+              </div>
+              <div id="appear" class="plugin">
+                <h3>Appear</h3>
+                <p>
+                  jQuery plugin for tracking element's appearance in browser viewport
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS File
+                </pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/owl/owl.carousel.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://morr.github.io/appear.html" target="_blank">http://morr.github.io/appear.html</a>
+                <h4>Official Documentation</h4>
+                <a href="https://github.com/morr/jquery.appear/" target="_blank">https://github.com/morr/jquery.appear/</a>
+              </div>
+              <div id="rateit" class="plugin">
+                <h3>Rate It</h3>
+                <p>
+                  Rating plugin for jQuery.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link href=&quot;../../common-files/plugins/rateit/rateit.css&quot;rel=&quot;stylesheet&quot;&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/rateit/jquery.rateit.min.js&quot;&gt;&lt;/script&gt; </pre>
+                <h4>Demo Page</h4>
+                <a href="http://www.radioactivethinking.com/rateit/example/example.htm" target="_blank">http://www.radioactivethinking.com/rateit/example/example.htm</a>
+                <h4>Official Documentation</h4>
+                <a href="http://rateit.codeplex.com/" target="_blank">http://rateit.codeplex.com/</a>
+              </div>
+              <div id="text-rotator" class="plugin">
+                <h3>Text Rotator</h3>
+                <p>
+                  Add a super simple rotating text to your website with little to no markup
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../../common-files/plugins/text-rotator/simpletextrotator.css&quot;&gt;</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/text-rotator/jquery.simple-text-rotator.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html" target="_blank">http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html</a>
+                <h4>Official Documentation</h4>
+                <a href="https://github.com/peachananr/simple-text-rotator" target="_blank">https://github.com/peachananr/simple-text-rotator</a>
+              </div>
+
+              <div id="backstretch" class="plugin">
+                <h3>Backstretch</h3>
+                <p>
+                  Allows you to add a dynamically-resized, slideshow-capable background image to any page or element.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS file</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/backstretch/backstretch.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://srobbin.com/jquery-plugins/backstretch/" target="_blank">http://srobbin.com/jquery-plugins/backstretch</a>
+                <h4>Official Documentation</h4>
+                <a href="https://github.com/srobbin/jquery-backstretch" target="_blank">https://github.com/srobbin/jquery-backstretch</a>
+              </div>
+              <div id="gmaps" class="plugin">
+                <h3>Gmaps</h3>
+                <p>
+                  Allows you to use the potential of Google Maps in a simple way.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS file</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;//maps.google.com/maps/api/js?sensor=true&quot;&gt;&lt;/script&gt; &lt;!-- Google Maps --&gt;
+&lt;script src=&quot;../../common-files/plugins/google-maps/gmaps.min.js&quot;&gt;&lt;/script&gt;  &lt;!-- Google Maps Easy --&gt;</pre>
+                <h4>Demo Page</h4>
+                <a href="http://hpneo.github.io/gmaps/examples.html" target="_blank">http://hpneo.github.io/gmaps/examples.html</a>
+                <h4>Official Documentation</h4>
+                <a href="http://hpneo.github.io/gmaps/documentation.html" target="_blank">http://hpneo.github.io/gmaps/documentation.html</a>
+              </div>
+              <div id="countup" class="plugin">
+                <h3>Countup</h3>
+                <p>
+                  A jQuery plugin that permit to quickly create animations that display numerical data in a more interesting way.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS file</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/countup/countUp.min.js&quot;&gt;&lt;/script&gt;</pre>
+                <h4>Official Documentation &amp; Demo</h4>
+                <a href="http://inorganik.github.io/countUp.js/" target="_blank">http://inorganik.github.io/countUp.js/</a>
+              </div>
+              <div id="countdown" class="plugin">
+                <h3>Count Down</h3>
+                <p>
+                  A simple and html agnostic date countdown plugin for jQuery.
+                </p>
+                <h4>CSS Files</h4>
+                <pre class="prettyprint linenums">No CSS file</pre>
+                <h4>JavaScript Files</h4>
+                <pre class="prettyprint linenums">
+&lt;script src=&quot;../../common-files/plugins/countdown/jquery.countdown.min.js&quot;&gt;&lt;/script&gt;;</pre>
+                <h4>Official Documentation &amp; Demo</h4>
+                <a href="http://hilios.github.io/jQuery.countdown/" target="_blank">http://hilios.github.io/jQuery.countdown/</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="copyright">
+              <p class="pull-left sm-pull-reset">
+                <span>Copyright <span class="copyright">©</span> 2015 </span>
+                <span>THEMES LAB</span>.
+                <span>All rights reserved. </span>
+              </p>
+              <p class="pull-right sm-pull-reset">
+                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT -->
+      </div>
+      <!-- END MAIN CONTENT -->
+    </section>
+    <!-- Preloader -->
+    <div class="loader-overlay">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a> 
+    <script src="../common-files/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="../common-files/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../common-files/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="../common-files/plugins/select2/select2.min.js"></script>
+    <script src="../common-files/plugins/icheck/icheck.min.js"></script>
+    <script src="../common-files/plugins/prettify/prettify.min.js"></script>
+    <script src="assets/js/application.js"></script>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+      prettyPrint();
+  });
+   function ShowPlugin() {
+        var id = $('#plugins-list').val();
+        $('.plugin').slideUp(400);
+        $('#' + id).delay(400).slideDown(400);
+        return;
+    }
+</script>

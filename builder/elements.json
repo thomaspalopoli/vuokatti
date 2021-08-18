@@ -1,0 +1,150 @@
+var _Elements = {"elements": {
+    "Navigation":[
+        {"url":"elements/navigation-transparent.html","height":80, "thumbnail":"elements/thumbs/navigation-transparent.jpg", "title":"Nav Transparent"},
+        {"url":"elements/navigation-transparent-fullwidth.html","height":80, "thumbnail":"elements/thumbs/navigation-transparent-fullwidth.jpg", "title":"Nav Transparent Fullwidth"},
+        {"url":"elements/navigation-address-search.html","height":126, "thumbnail":"elements/thumbs/navigation-address-search.jpg", "title":"Nav Address & Search"},
+        {"url":"elements/navigation-address-search-colored.html","height":126, "thumbnail":"elements/thumbs/navigation-address-search-colored.jpg", "title":"Nav Address & Search Colored"},
+        {"url":"elements/navigation-address-search-transparent.html","height":126, "thumbnail":"elements/thumbs/navigation-address-search-transparent.jpg", "title":"Nav Address & Search Transparent"},
+        {"url":"elements/navigation-dark.html","height":80, "thumbnail":"elements/thumbs/navigation-dark.jpg", "title":"Navigation Dark"},
+        {"url":"elements/navigation-dark-not-fixed.html","height":80, "thumbnail":"elements/thumbs/navigation-dark-not-fixed.jpg", "title":"Navigation Dark Not Fixed"},
+        {"url":"elements/navigation-logo-center.html","height":161, "thumbnail":"elements/thumbs/navigation-logo-center.jpg", "title":"Nav Logo Center"},
+        {"url":"elements/navigation-logo-center-colored.html","height":161, "thumbnail":"elements/thumbs/navigation-logo-center-colored.jpg", "title":"Nav Logo Center Colored"},
+        {"url":"elements/navigation-logo-center-not-fixed.html","height":161, "thumbnail":"elements/thumbs/navigation-logo-center-not-fixed.jpg", "title":"Nav Logo Center Not Fixed"},
+        {"url":"elements/navigation-logo-center-transparent.html","height":161, "thumbnail":"elements/thumbs/navigation-logo-center-transparent.jpg", "title":"Nav Logo Center Transparent"},
+        {"url":"elements/navigation-phone-social.html","height":130, "thumbnail":"elements/thumbs/navigation-phone-social.jpg", "title":"Nav Phone with Social Icons"},
+        {"url":"elements/navigation-phone-social-colored.html","height":130, "thumbnail":"elements/thumbs/navigation-phone-social-colored.jpg", "title":"Nav Phone with Social Icons Colored"},
+        {"url":"elements/navigation-phone-social-transparent.html","height":130, "thumbnail":"elements/thumbs/navigation-phone-social-transparent.jpg", "title":"Nav Phone with Social Icons Transparent"},
+        {"url":"elements/navigation-white.html","height":80, "thumbnail":"elements/thumbs/navigation-white.jpg", "title":"Navigation White"},
+        {"url":"elements/navigation-white-not-fixed.html","height":80, "thumbnail":"elements/thumbs/navigation-white-not-fixed.jpg", "title":"Nav White Not Fixed"}
+    ],
+    "Header&nbsp;with&nbsp;Navigation":[
+        {"url":"elements/nav-header-animated.html","height":800, "thumbnail":"elements/thumbs/nav-header-animated.jpg", "title":"Background Animation"},
+        {"url":"elements/nav-header-bg-slider-fullheight.html","height":800, "thumbnail":"elements/thumbs/nav-header-bg-slider-fullheight.jpg", "title":"Bacground Slide Fullheight"},
+        {"url":"elements/nav-header-image-parallax.html","height":800, "thumbnail":"elements/thumbs/nav-header-image-parallax.jpg", "title":"Image Parallax"},
+        {"url":"elements/nav-header-image-parallax-fullheight.html","height":800, "thumbnail":"elements/thumbs/nav-header-image-parallax-fullheight.jpg", "title":"Image Parallax Fullheight"},
+        {"url":"elements/nav-header-slider.html","height":800, "thumbnail":"elements/thumbs/nav-header-slider.jpg", "title":"Slider Image"},
+        {"url":"elements/nav-header-slider-fullheight.html","height":800, "thumbnail":"elements/thumbs/nav-header-slider-fullheight.jpg", "title":"Slider Image Fullheight"},
+        {"url":"elements/nav-header-slider-revolution.html","height":800, "thumbnail":"elements/thumbs/nav-header-slider-revolution.jpg", "title":"Revolution Slider"},
+        {"url":"elements/nav-header-text-rotator.html","height":800, "thumbnail":"elements/thumbs/nav-header-text-rotator.jpg", "title":"Text Rotation"},
+        {"url":"elements/nav-header-video-fullheight.html","height":800, "thumbnail":"elements/thumbs/nav-header-video-fullheight.jpg", "title":"Video Fullheight"},
+        {"url":"elements/nav-header-video-fullheight-play-btn.html","height":800, "thumbnail":"elements/thumbs/nav-header-video-fullheight-play-btn.jpg", "title":"Video with Play Button"}
+    ],
+    "Headers&nbsp;Only":[
+    	{"url":"elements/header-animated.html","height":800, "thumbnail":"elements/thumbs/header-animated.jpg", "title":"Background Animation"},
+    	{"url":"elements/header-bg-slider-fullheight.html","height":800, "thumbnail":"elements/thumbs/header-bg-slider-fullheight.jpg", "title":"Bacground Slide Fullheight"},
+    	{"url":"elements/header-image-parallax.html","height":800, "thumbnail":"elements/thumbs/header-image-parallax.jpg", "title":"Image Parallax"},
+        {"url":"elements/header-image-parallax-fullheight.html","height":800, "thumbnail":"elements/thumbs/header-image-parallax-fullheight.jpg", "title":"Image Parallax Fullheight"},
+        {"url":"elements/header-slider.html","height":800, "thumbnail":"elements/thumbs/header-slider.jpg", "title":"Slider Image"},
+        {"url":"elements/header-slider-fullheight.html","height":800, "thumbnail":"elements/thumbs/header-slider-fullheight.jpg", "title":"Slider Image Fullheight"},
+        {"url":"elements/header-slider-revolution.html","height":800, "thumbnail":"elements/thumbs/header-slider-revolution.jpg", "title":"Revolution Slider"},
+        {"url":"elements/header-text-rotator.html","height":800, "thumbnail":"elements/thumbs/header-text-rotator.jpg", "title":"Text Rotation"},
+        {"url":"elements/header-video-fullheight.html","height":800, "thumbnail":"elements/thumbs/header-video-fullheight.jpg", "title":"Video Fullheight"},
+        {"url":"elements/header-video-fullheight-play-btn.html","height":800, "thumbnail":"elements/thumbs/header-video-fullheight-play-btn.jpg", "title":"Video with Play Button"}
+    ],
+    "Services&nbsp;and&nbsp;FAQ":[
+    	{"url":"elements/services-2-columns.html","height":575, "thumbnail":"elements/thumbs/services-2-columns.jpg", "title":"Services 2 Columns"},
+    	{"url":"elements/services-3-columns.html","height":675, "thumbnail":"elements/thumbs/services-3-columns.jpg", "title":"Services 3 Columns"},
+    	{"url":"elements/services-tabs.html","height":452, "thumbnail":"elements/thumbs/services-tabs.jpg", "title":"Services Tabs"},
+        {"url":"elements/page-faq.html","height":538, "thumbnail":"elements/thumbs/page-faq.jpg", "title":"FAQ"}
+    ],
+    "Portfolios":[
+        {"url":"elements/portfolio-boxed-text-2-columns.html","height":3000, "thumbnail":"elements/thumbs/portfolio-boxed-text-2-columns.jpg", "title":"Boxed 2 Columns with Text"},
+        {"url":"elements/portfolio-boxed-text-3-columns.html","height":1493, "thumbnail":"elements/thumbs/portfolio-boxed-text-3-columns.jpg", "title":"Boxed 3 Columns with Text"},
+        {"url":"elements/portfolio-boxed-text-4-columns.html","height":976, "thumbnail":"elements/thumbs/portfolio-boxed-text-4-columns.jpg", "title":"Boxed 4 Columns with Text"},
+        {"url":"elements/portfolio-wide-text-3-columns.html","height":1358, "thumbnail":"elements/thumbs/portfolio-wide-text-3-columns.jpg", "title":"Wide 3 Columns with Text"},
+        {"url":"elements/portfolio-wide-text-4-columns.html","height":2163, "thumbnail":"elements/thumbs/portfolio-wide-text-4-columns.jpg", "title":"Wide 4 Columns with Text"},
+        {"url":"elements/portfolio-wide-text-5-columns.html","height":820, "thumbnail":"elements/thumbs/portfolio-wide-text-5-columns.jpg", "title":"Wide 5 Columns with Text"},
+    	{"url":"elements/portfolio-boxed-2-columns-no-space.html","height":2063, "thumbnail":"elements/thumbs/portfolio-boxed-2-columns-no-space.jpg", "title":"Boxed 2 Columns no Space"},
+    	{"url":"elements/portfolio-boxed-2-columns-with-space.html","height":1767, "thumbnail":"elements/thumbs/portfolio-boxed-2-columns-with-space.jpg", "title":"Boxed 2 Columns with Space"},
+        {"url":"elements/portfolio-boxed-3-columns-no-space.html","height":1183, "thumbnail":"elements/thumbs/portfolio-boxed-3-columns-no-space.jpg", "title":"Boxed 3 Columns no Space"},
+        {"url":"elements/portfolio-boxed-3-columns-with-space.html","height":1238, "thumbnail":"elements/thumbs/portfolio-boxed-3-columns-with-space.jpg", "title":"Boxed 3 Columns with Space"},
+        {"url":"elements/portfolio-boxed-4-columns-no-space.html","height":743, "thumbnail":"elements/thumbs/portfolio-boxed-4-columns-no-space.jpg", "title":"Boxed 4 Columns no Space"},
+        {"url":"elements/portfolio-boxed-4-columns-with-space.html","height":798, "thumbnail":"elements/thumbs/portfolio-boxed-4-columns-with-space.jpg", "title":"Boxed 4 Columns with Space"},
+        {"url":"elements/portfolio-wide-3-columns-no-space.html","height":1779, "thumbnail":"elements/thumbs/portfolio-wide-3-columns-no-space.jpg", "title":"Wide 3 Columns no Space"},
+        {"url":"elements/portfolio-wide-3-columns-with-space.html","height":1881, "thumbnail":"elements/thumbs/portfolio-wide-3-columns-with-space.jpg", "title":"Wide 3 Columns with Space"},
+        {"url":"elements/portfolio-wide-4-columns-no-space.html","height":1199, "thumbnail":"elements/thumbs/portfolio-wide-4-columns-no-space.jpg", "title":"Wide 4 Columns no Space"},
+        {"url":"elements/portfolio-wide-4-columns-with-space.html","height":1267, "thumbnail":"elements/thumbs/portfolio-wide-4-columns-with-space.jpg", "title":"Wide 4 Columns with Space"},
+        {"url":"elements/portfolio-wide-5-columns-no-space.html","height":929, "thumbnail":"elements/thumbs/portfolio-wide-5-columns-no-space.jpg", "title":"Wide 5 Columns no Space"},
+        {"url":"elements/portfolio-wide-5-columns-with-space.html","height":985, "thumbnail":"elements/thumbs/portfolio-wide-5-columns-with-space.jpg", "title":"Wide 5 Columns with Space"},
+        {"url":"elements/portfolio-single-boxed.html","height":1037, "thumbnail":"elements/thumbs/portfolio-single-boxed.jpg", "title":"Single Simple Boxed"},
+        {"url":"elements/portfolio-single-fixed-text.html","height":1710, "thumbnail":"elements/thumbs/portfolio-single-fixed-text.jpg", "title":"Single Text Fixed"},
+        {"url":"elements/portfolio-single-full-height.html","height":1865, "thumbnail":"elements/thumbs/portfolio-single-full-height.jpg", "title":"Single Full Height"},
+        {"url":"elements/portfolio-single-full-width.html","height":977, "thumbnail":"elements/thumbs/portfolio-single-full-width.jpg", "title":"Single Full Width"},
+        {"url":"elements/portfolio-single-gallery.html","height":1967, "thumbnail":"elements/thumbs/portfolio-single-gallery.jpg", "title":"Single Gallery"}
+    ],
+    "Team":[
+    	{"url":"elements/team-2-columns-square-dark.html","height":394, "thumbnail":"elements/thumbs/team-2-columns-square-dark.jpg", "title":"4 Members Square Dark"},
+    	{"url":"elements/team-2-columns-square-light.html","height":533, "thumbnail":"elements/thumbs/team-2-columns-square-light.jpg", "title":"4 Members Square Light"},
+    	{"url":"elements/team-3-columns-dark.html","height":533, "thumbnail":"elements/thumbs/team-3-columns-dark.jpg", "title":"3 Members Rounded Dark"},
+        {"url":"elements/team-3-columns-light.html","height":674, "thumbnail":"elements/thumbs/team-3-columns-light.jpg", "title":"3 Members Rounded Light"},
+        {"url":"elements/team-4-columns-dark.html","height":394, "thumbnail":"elements/thumbs/team-4-columns-dark.jpg", "title":"4 Members Dark"},
+        {"url":"elements/team-4-columns-light.html","height":533, "thumbnail":"elements/thumbs/team-4-columns-light.jpg", "title":"4 Members Light"}
+    ],
+    "Blog":[
+        {"url":"elements/blog-classic-fullwidth.html","height":3195, "thumbnail":"elements/thumbs/blog-classic-fullwidth.jpg", "title":"Blog Fullwidth"},
+        {"url":"elements/blog-classic-left.html","height":2626, "thumbnail":"elements/thumbs/blog-classic-left.jpg", "title":"Blog Sidebar Left"},
+        {"url":"elements/blog-classic-right.html","height":2626, "thumbnail":"elements/thumbs/blog-classic-right.jpg", "title":"Blog Sidebar Right"},
+        {"url":"elements/blog-grid-2-columns.html","height":1524, "thumbnail":"elements/thumbs/blog-grid-2-columns.jpg", "title":"Blog Grid 2 Col"},
+        {"url":"elements/blog-grid-3-columns.html","height":1524, "thumbnail":"elements/thumbs/blog-grid-3-columns.jpg", "title":"Blog Grid 3 Col"},
+        {"url":"elements/blog-grid-4-columns.html","height":1366, "thumbnail":"elements/thumbs/blog-grid-4-columns.jpg", "title":"Blog Grid 4 Col"},
+        {"url":"elements/blog-masonry-2-columns.html","height":1708, "thumbnail":"elements/thumbs/blog-masonry-2-columns.jpg", "title":"Blog Masonry 2 Col"},
+        {"url":"elements/blog-masonry-3-columns.html","height":1708, "thumbnail":"elements/thumbs/blog-masonry-3-columns.jpg", "title":"Blog Grid 2 Col"},
+        {"url":"elements/blog-masonry-4-columns.html","height":1535, "thumbnail":"elements/thumbs/blog-masonry-4-columns.jpg", "title":"Blog Grid 2 Col"},
+        {"url":"elements/blog-single-fullwidth.html","height":1913, "thumbnail":"elements/thumbs/blog-single-fullwidth.jpg", "title":"Post Fullwidth"},
+        {"url":"elements/blog-single-sidebar-left.html","height":2146, "thumbnail":"elements/thumbs/blog-single-sidebar-left.jpg", "title":"Post Sidebar Left"},
+        {"url":"elements/blog-single-sidebar-right.html","height":2146, "thumbnail":"elements/thumbs/blog-single-sidebar-right.jpg", "title":"Post Sidebar Right"}
+    ],
+    "Pricing Tables":[
+    	{"url":"elements/pricing-3-columns.html","height":762, "thumbnail":"elements/thumbs/pricing-3-columns-dark.jpg", "title":"Pricing 3 Plans"},
+    	{"url":"elements/pricing-4-columns.html","height":762, "thumbnail":"elements/thumbs/pricing-4-columns.jpg", "title":"Pricing 4 Plans"},
+    	{"url":"elements/pricing-icons-3-columns.html","height":762, "thumbnail":"elements/thumbs/pricing-icons-3-columns.jpg", "title":"Pricing 3 Plans with Icons"},
+        {"url":"elements/pricing-icons-4-columns.html","height":748, "thumbnail":"elements/thumbs/pricing-icons-4-columns.jpg", "title":"Pricing 4 Plans with Icons"},
+        {"url":"elements/pricing-no-space.html","height":748, "thumbnail":"elements/thumbs/pricing-no-space.jpg", "title":"Pricing Collapsed Plans"}
+    ],
+    "Ecommerce":[
+        {"url":"elements/ecommerce-faq.html","height":800, "thumbnail":"elements/thumbs/ecommerce-faq.jpg", "title":"FAQ"},
+        {"url":"elements/ecommerce-product-details.html","height":800, "thumbnail":"elements/thumbs/ecommerce-product-details.jpg", "title":"Product Details"},
+        {"url":"elements/ecommerce-products-list.html","height":900, "thumbnail":"elements/thumbs/ecommerce-products-list.jpg", "title":"Products List"},
+        {"url":"elements/ecommerce-wishlist.html","height":600, "thumbnail":"elements/thumbs/ecommerce-wishlist.jpg", "title":"Wish List"}
+    ],
+    "Contact":[
+        {"url":"elements/contact-3-columns.html","height":800, "thumbnail":"elements/thumbs/contact-3-columns.jpg", "title":"Contact 3 Columns"},
+    	{"url":"elements/contact-full-map.html","height":900, "thumbnail":"elements/thumbs/contact-full-map.jpg", "title":"Contact Full Map"},
+    	{"url":"elements/contact-map-bottom.html","height":811, "thumbnail":"elements/thumbs/contact-map-bottom.jpg", "title":"Contact Map Bottom"},
+        {"url":"elements/contact-map-side.html","height":650, "thumbnail":"elements/thumbs/contact-map-side.jpg", "title":"Contact Map Side"}
+    ],
+    "User":[
+        {"url":"elements/user-login.html","height":495, "thumbnail":"elements/thumbs/user-login.jpg", "title":"User Login"},
+        {"url":"elements/user-register.html","height":495, "thumbnail":"elements/thumbs/user-register.jpg", "title":"User Register"},
+        {"url":"elements/user-password-recover.html","height":429, "thumbnail":"elements/thumbs/user-password-recover.jpg", "title":"Password Recover"},
+        {"url":"elements/user-account.html","height":736, "thumbnail":"elements/thumbs/user-account.jpg", "title":"User Account"}
+    ],
+    "Footers":[
+    	{"url":"elements/footer-dark-3-columns.html","height":186, "thumbnail":"elements/thumbs/footer-dark-3-columns.jpg", "title":"Footer Dark 3 Columns"},
+    	{"url":"elements/footer-dark-contact-form.html","height":242, "thumbnail":"elements/thumbs/footer-dark-contact-form.jpg", "title":"Footer Dark Contact"},
+    	{"url":"elements/footer-dark-copyright.html","height":242, "thumbnail":"elements/thumbs/footer-dark-copyright.jpg", "title":"Footer Dark Copyright"},
+        {"url":"elements/footer-dark-copyright-center.html","height":288, "thumbnail":"elements/thumbs/footer-dark-copyright-center.jpg", "title":"Footer Copyright Center"},
+        {"url":"elements/footer-dark-newsletter.html","height":95, "thumbnail":"elements/thumbs/footer-dark-newsletter.jpg", "title":"Footer Dark Newsletter"},
+        {"url":"elements/footer-dark-social.html","height":85, "thumbnail":"elements/thumbs/footer-dark-social.jpg", "title":"Footer Dark Social"},
+        {"url":"elements/footer-light-3-columns.html","height":186, "thumbnail":"elements/thumbs/footer-light-3-columns.jpg", "title":"Footer Light 3 Columns"},
+        {"url":"elements/footer-light-contact-form.html","height":242, "thumbnail":"elements/thumbs/footer-light-contact-form.jpg", "title":"Footer Light Contact"},
+        {"url":"elements/footer-light-contact-form.html","height":242, "thumbnail":"elements/thumbs/footer-light-contact-form.jpg", "title":"Footer Light Copyright"},
+        {"url":"elements/footer-light-copyright-center.html","height":288, "thumbnail":"elements/thumbs/footer-light-copyright-center.jpg", "title":"Footer Copyright Center"},
+        {"url":"elements/footer-light-newsletter.html","height":95, "thumbnail":"elements/thumbs/footer-light-newsletter.jpg", "title":"Footer Light Newsletter"},
+        {"url":"elements/footer-light-social.html","height":85, "thumbnail":"elements/thumbs/footer-light-social.jpg", "title":"Footer Light Social"}
+    ],
+    "Various":[
+        {"url":"elements/various-newsletter.html","height":138, "thumbnail":"elements/thumbs/various-newsletter.jpg", "title":"Newsletter"},
+        {"url":"elements/various-call-action.html","height":106, "thumbnail":"elements/thumbs/various-call-action.jpg", "title":"Call to Action"},
+        {"url":"elements/various-call-action-2.html","height":196, "thumbnail":"elements/thumbs/various-call-action-2.jpg", "title":"Call to Action 2"},
+        {"url":"elements/various-text-laptop.html","height":486, "thumbnail":"elements/thumbs/various-text-laptop.jpg", "title":"Laptop Slider"},
+        {"url":"elements/various-text-phone.html","height":693, "thumbnail":"elements/thumbs/various-text-phone.jpg", "title":"Phone Slider"},
+        {"url":"elements/various-phone-animated.html","height":571, "thumbnail":"elements/thumbs/various-phone-animated.jpg", "title":"Phone Animated"},
+        {"url":"elements/various-recent-works.html","height":585, "thumbnail":"elements/thumbs/various-recent-works.jpg", "title":"Recent Works"},
+        {"url":"elements/various-latest-news.html","height":566, "thumbnail":"elements/thumbs/various-latest-news.jpg", "title":"Latest News"},
+        {"url":"elements/various-testimonials.html","height":420, "thumbnail":"elements/thumbs/various-testimonials.jpg", "title":"Testimonials"},
+        {"url":"elements/various-logo-slider.html","height":336, "thumbnail":"elements/thumbs/various-logo-slider.jpg", "title":"Logo Slider"}
+
+    ]
+    }
+}

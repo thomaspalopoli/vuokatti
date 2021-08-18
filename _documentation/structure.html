@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="admin-themes-lab">
+    <meta name="author" content="themes-lab">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <title>Make Admin Template Documentation</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../common-files/css/ui.css" rel="stylesheet">
+  </head>
+  <!-- BEGIN BODY -->
+  <body class="fixed-topbar fixed-sidebar">
+    <section>
+      <!-- BEGIN SIDEBAR -->
+      <div class="sidebar">
+        <div class="logopanel">
+          <h1>
+            <a href="intro.html"></a>
+          </h1>
+        </div>
+        <div class="sidebar-inner">
+          <ul class="nav nav-pills nav-stacked nav-sidebar">
+            <li><a href="intro.html"><i class="line-icon-home"></i><span>Introduction</span></a></li>
+            <li class="nav-active active"><a href="structure.html"><i class="line-icon-doc"></i><span>Structure</span></a></li>
+            <li><a href="one-page.html"><i class="line-icon-doc"></i><span>One Page</span></a></li>
+            <li><a href="builder.html"><i class="line-icon-puzzle"></i><span>Builder</span></a></li>
+            <li class="nav-parent">
+              <a href="#"><i class="line-icon-eye"></i><span><span>UI Elements</span></a>
+              <ul class="children collapse">
+                <li><a href="ui-buttons.html">Buttons</a></li>
+                <li><a href="ui-tabs.html">Tabs</a></li>
+                <li><a href="ui-icons.html">Icons</a></li>
+              </ul>
+            </li>
+            <li class="nav-parent">
+              <a href="#"><i class="line-icon-note"></i><span><span data-translate="Mailbox">Forms</span></a>
+              <ul class="children collapse">
+                <li><a href="form-layouts.html">Form Layouts</a></li>
+                <li><a href="form-elements.html">Form Elements</a></li>
+                <li><a href="form-input-text.html">Form Input Text</a></li>
+                <li><a href="form-wizard.html">Form Wizard</a></li>
+              </ul>
+            </li>
+            <li><a href="maps-google.html"><i class="line-icon-globe"></i><span>Google Maps</span></a></li>
+            <li><a href="tables.html"><i class="fa fa-table"></i><span>Tables</span></a></li>
+            <li><a href="plugins.html"><i class="line-icon-diamond"></i><span>Plugins</span></a></li>
+            <li><a href="customize.html"><i class="line-icon-pencil"></i><span>Customization</span></a></li>
+            <li><a href="credits.html"><i class="line-icon-grid"></i><span>Credits</span></a></li>
+            <li><a href="contact.html"><i class="line-icon-support"></i><span>Support</span></a></li>
+          </ul>
+          <div class="sidebar-footer clearfix">
+          <a class="btn btn-primary btn-block" href="mailto:support@themes-lab.com">Send us a Message</a>
+          </div>
+        </div>
+      </div>
+      <!-- END SIDEBAR -->
+      <div class="main-content">
+        <!-- BEGIN PAGE CONTENT -->
+        <div class="page-content">
+          <div class="row">
+            <div class="col-lg-8 col-md-12">
+              <h2 class="doc-title">Template <strong>Structure</strong></h2>
+              <p>The general template structure is the same throughout the template. All template files have fixed structure consisting of topbar, header, page content and footer.</p>
+              <pre class="prettyprint linenums">
+&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- HEAD SECTION --&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;loader-overlay&quot;&gt;
+        &lt;!-- PRELOADER --&gt;
+    &lt;/div&gt;
+    &lt;!--  BEGIN TOPNAV --&gt;
+    &lt;div class=&quot;topnav&quot;&gt;
+      &lt;div class=&quot;section&quot;&gt;
+        &lt;div id=&quot;topbar-hold&quot; class=&quot;nav-hold container&quot;&gt;
+          &lt;nav class=&quot;navbar&quot; role=&quot;navigation&quot;&gt;
+            &lt;div class=&quot;navbar-header&quot;&gt;
+              &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-responsive-collapse&quot;&gt;
+              &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+              &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;!-- Site Name --&gt;
+              &lt;a class=&quot;site-name navbar-brand&quot; href=&quot;index-1.html&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;collapse navbar-collapse navbar-responsive-collapse&quot;&gt;
+              &lt;!-- Main Navigation menu --&gt;
+            &lt;/div&gt;
+          &lt;/nav&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!--  END TOPNAV --&gt;
+
+    &lt;header class=&quot;height-full center&quot;&gt;
+      &lt;!-- HEADER CONTENT --&gt;
+    &lt;/header&gt;
+
+    &lt;!-- BEGIN PAGE CONTENT --&gt;
+    &lt;section class=&quot;&quot;&gt;
+      &lt;!-- SECTION CONTENT --&gt;
+    &lt;/section&gt;
+    &lt;!-- END PAGE CONTENT --&gt;
+    
+    &lt;div class=&quot;section-footer&quot;&gt;
+      &lt;!-- FOOTER --&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-copyright&quot;&gt;
+      &lt;!-- COPYRIGHT --&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+              <h2><strong>Main Navigation</strong> Structure</h2>
+              <p>All your menu elements (li) will be inside this structure:</p>
+                            <pre class="prettyprint linenums">
+&lt;!-- Main Navigation menu Starts --&gt;
+&lt;div class=&quot;collapse navbar-collapse navbar-responsive-collapse&quot;&gt;
+  &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- Main Navigation menu ends--&gt;</pre>
+<p>You can create various type of submenus: simple, fullwidth, with 4 or 6 columns...</p>
+              <p><strong>Simple menu without submenu:</strong></p>
+              <pre class="prettyprint linenums">
+&lt;li&gt;
+  &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+&lt;/li&gt;</pre>
+              <p><strong>Simple submenu (like Ecommerce in this template):</strong></p>
+              <pre class="prettyprint linenums">
+&lt;li class=&quot;dropdown&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle top-menu&quot; data-toggle=&quot;dropdown&quot; data-hover=&quot;dropdown&quot; data-close-others=&quot;false&quot;&gt;Menu Title&lt;/a&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;link-1.html&quot;&gt;Submenu 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;link-2.html&quot;&gt;Submenu 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;link-3.html&quot;&gt;Submenu 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</pre>
+
+              <p><strong>Submenu simple with submenus (like Blog in this template):</strong></p>
+              <pre class="prettyprint linenums">
+&lt;li class=&quot;dropdown&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle top-menu&quot; data-toggle=&quot;dropdown&quot; data-hover=&quot;dropdown&quot; data-close-others=&quot;false&quot;&gt;Menu Title&lt;/a&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    &lt;li class=&quot;dropdown&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-delay=&quot;0&quot; data-hover=&quot;dropdown&quot; data-close-others=&quot;false&quot;&gt;Submenu 1&lt;/a&gt;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;link-1.html&quot;&gt;Sub Submenu 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-2.html&quot;&gt;Sub Submenu 2&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;dropdown&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-delay=&quot;0&quot; data-hover=&quot;dropdown&quot; data-close-others=&quot;false&quot;&gt;Submenu 2&lt;/a&gt;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;link-3.html&quot;&gt;Sub Submenu 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-4.html&quot;&gt;Sub Submenu 4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-5.html&quot;&gt;Sub Submenu 5&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;dropdown&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-delay=&quot;0&quot; data-hover=&quot;dropdown&quot; data-close-others=&quot;false&quot;&gt;Submenu 3&lt;/a&gt;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;link-6.html&quot;&gt;Sub Submenu 6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-7.html&quot;&gt;Sub Submenu 7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-8.html&quot;&gt;Sub Submenu 8&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</pre>
+
+              <p><strong>Submenu full width with 4 columns (like Home in this template):</strong></p>
+              <pre class="prettyprint linenums">
+&lt;li class=&quot;dropdown full-width&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle top-menu&quot; data-toggle=&quot;dropdown&quot; data-hover=&quot;dropdown&quot; data-close-others=&quot;false&quot;&gt;Menu Title&lt;/a&gt;
+  &lt;ul class=&quot;dropdown-menu grid-4&quot;&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-1.html&quot;&gt;Submenu 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-2.html&quot;&gt;Submenu 2&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-3.html&quot;&gt;Submenu 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-4.html&quot;&gt;Submenu 4&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-5.html&quot;&gt;Submenu 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-6.html&quot;&gt;Submenu 6&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-7.html&quot;&gt;Submenu 7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-8.html&quot;&gt;Submenu 8&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-9.html&quot;&gt;Submenu 9&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-10.html&quot;&gt;Submenu 10&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-11.html&quot;&gt;Submenu 11&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-12.html&quot;&gt;Submenu 12&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-13.html&quot;&gt;Submenu 13&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-14.html&quot;&gt;Submenu 14&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-15.html&quot;&gt;Submenu 15&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-16.html&quot;&gt;Submenu 16&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</pre>
+
+              <p><strong>Submenu full width with 6 columns (like Pages in this template):</strong></p>
+              <pre class="prettyprint linenums">
+&lt;li class=&quot;dropdown full-width&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle top-menu&quot; data-toggle=&quot;dropdown&quot; data-hover=&quot;dropdown&quot; data-close-others=&quot;false&quot;&gt;Menu Title&lt;/a&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    &lt;li class=&quot;column&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;menu-title&quot;&gt;Title 1&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-1.html&quot;&gt;Submenu 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-2.html&quot;&gt;Submenu 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-3.html&quot;&gt;Submenu 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-4.html&quot;&gt;Submenu 4&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;column&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;menu-title&quot;&gt;Title 2&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-5.html&quot;&gt;Submenu 5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-6.html&quot;&gt;Submenu 6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-7.html&quot;&gt;Submenu 7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-8.html&quot;&gt;Submenu 8&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;column&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;menu-title&quot;&gt;Title 3&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-9.html&quot;&gt;Submenu 9&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-10.html&quot;&gt;Submenu 10&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-11.html&quot;&gt;Submenu 11&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-12.html&quot;&gt;Submenu 12&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;column&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;menu-title&quot;&gt;Title 4&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-13.html&quot;&gt;Submenu 13&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-14.html&quot;&gt;Submenu 14&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-15.html&quot;&gt;Submenu 15&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-16.html&quot;&gt;Submenu 16&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;column&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;menu-title&quot;&gt;Title 5&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-17.html&quot;&gt;Submenu 17&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-18.html&quot;&gt;Submenu 18&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-19.html&quot;&gt;Submenu 19&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-20.html&quot;&gt;Submenu 20&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; class=&quot;menu-title&quot;&gt;Title 6&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;link-21.html&quot;&gt;Submenu 21&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-22.html&quot;&gt;Submenu 22&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-23.html&quot;&gt;Submenu 23&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;link-24.html&quot;&gt;Submenu 24&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</pre>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+          <div class="footer">
+            <div class="copyright">
+              <p class="pull-left sm-pull-reset">
+                <span>Copyright <span class="copyright">©</span> 2015 </span>
+                <span>THEMES LAB</span>.
+                <span>All rights reserved. </span>
+              </p>
+              <p class="pull-right sm-pull-reset">
+                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT -->
+      </div>
+      <!-- END MAIN CONTENT -->
+    </section>
+    <!-- Preloader -->
+    <div class="loader-overlay">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a> 
+    <script src="../common-files/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="../common-files/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../common-files/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="../common-files/plugins/select2/select2.min.js"></script>
+    <script src="../common-files/plugins/icheck/icheck.min.js"></script>
+    <script src="../common-files/plugins/prettify/prettify.min.js"></script>
+    <script src="assets/js/application.js"></script>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+      prettyPrint();
+  });
+</script>

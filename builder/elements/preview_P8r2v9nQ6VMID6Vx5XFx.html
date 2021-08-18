@@ -1,0 +1,957 @@
+<!DOCTYPE HTML>
+  <html lang="en-US">
+    <head>
+      <title>Make Frontend Website</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../../common-files/css/style.min.css"/>
+      <link rel="stylesheet" id="scheme-source" href="../../common-files/css/schemes/gray.css" />
+      <!-- BEGIN PAGE STYLE -->
+      <link rel="stylesheet" href="../../common-files/plugins/owl/owl.carousel.min.css">
+      <link rel="stylesheet" href="../../common-files/plugins/bxslider/jquery.bxslider.min.css" />
+      <link rel="stylesheet" href="../../common-files/plugins/text-rotator/simpletextrotator.min.css">
+      <link rel="stylesheet" href="../../common-files/plugins/slider-revolution/examples/rs-plugin/css/settings.css" media="screen" />
+      <link rel="stylesheet" href="../../common-files/plugins/magnific/magnific-popup.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="../../common-files/plugins/rateit/rateit.css"rel="stylesheet">
+      <!-- END PAGE STYLE -->
+      <!-- [if lt IE 9]>
+        <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif] -->
+    </head>
+    <body>
+      <!-- BEGIN PRELOADER -->
+      <div class="loader-overlay">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+      <!-- END PRELOADER --><head><script type="text/javascript" data-name="TokenSigning">(function() {
+    // Promises
+    var _eid_promises = {};
+    // Turn the incoming message from extension
+    // into pending Promise resolving
+    window.addEventListener("message", function(event) {
+        if (event.source !== window) return;
+        if (event.data.src && (event.data.src === "background.js")) {
+            console.log("Page received: ");
+            console.log(event.data);
+            // Get the promise
+            if (event.data.nonce) {
+                var p = _eid_promises[event.data.nonce];
+                // resolve
+                if (event.data.result === "ok") {
+                    if (event.data.signature !== undefined) {
+                        p.resolve({hex: event.data.signature});
+                    } else if (event.data.version !== undefined) {
+                        p.resolve(event.data.extension + "/" + event.data.version);
+                    } else if (event.data.cert !== undefined) {
+                        p.resolve({hex: event.data.cert});
+                    } else {
+                        console.log("No idea how to handle message");
+                        console.log(event.data);
+                    }
+                } else {
+                    // reject
+                    p.reject(new Error(event.data.result));
+                }
+                delete _eid_promises[event.data.nonce];
+            } else {
+                console.log("No nonce in event msg");
+            }
+        }
+    }, false);
+
+    window.TokenSigning = function() {
+        function nonce() {
+            var val = "";
+            var hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (var i = 0; i < 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+
+        function messagePromise(msg) {
+            return new Promise(function(resolve, reject) {
+                // amend with necessary metadata
+                msg["nonce"] = nonce();
+                msg["src"] = "page.js";
+                // send message
+                window.postMessage(msg, "*");
+                // and store promise callbacks
+                _eid_promises[msg.nonce] = {
+                    resolve: resolve,
+                    reject: reject
+                };
+            });
+        }
+        this.getCertificate = function(options) {
+            var msg = {type: "CERT", lang: options.lang, filter: options.filter};
+            console.log("getCertificate()");
+            return messagePromise(msg);
+        };
+        this.sign = function(cert, hash, options) {
+            var msg = {type: "SIGN", cert: cert.hex, hash: hash.hex, hashtype: hash.type, lang: options.lang, info: options.info};
+            console.log("sign()");
+            return messagePromise(msg);
+        };
+        this.getVersion = function() {
+            console.log("getVersion()");
+            return messagePromise({
+                type: "VERSION"
+            });
+        };
+    };
+})();</script></head><body><div id="page" class="page">
+        
+    <!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      <div class="topnav fixed-topnav bg-dark topnav-top transparent">
+        <form action="#" class="form-search" id="top-search" method="get" role="form">
+          <div class="container">
+            <div class="search-inner clearfix">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="Search" name="s" class="search-input placeholder" autocomplete="off">
+              <input type="submit" value="Search">
+              <div class="search-close">
+                <a href="#"><i class="line-icon-close"></i></a>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="section">
+          <div id="topbar-hold" class="nav-hold container">
+            <nav class="navbar" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+              <!-- Site Name -->
+              <a class="site-name navbar-brand" href="../homepage/index-slider-parallax.html"></a>
+            </div>
+            <!-- Main Navigation menu Starts -->
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right sm" data-smartmenus-id="16281660979023418">
+                <li>
+                  <a href="#the-big-project">The Big Project</a>
+                </li>
+                <li>
+                  <a href="#">Pilot Project</a>
+                </li>
+                <li>
+                  <a href="#">Homes</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Our Family</a>
+                </li>
+                <li>
+                  <a href="#">Gallery</a>
+                </li>
+                <li class="li-search"><a href="#" class="toggle-search"><i class="line-icon-magnifier"></i></a></li>
+              </ul>
+            </div>
+            <!-- Main Navigation menu ends-->
+          </nav>
+          </div>
+        </div>
+      </div>
+      <!--  End Topbar simple --><!--  Begin Topbar simple -->
+      <div class="topnav fixed-topnav transparent topnav-top">
+        <form action="#" class="form-search" id="top-search" method="get" role="form">
+          <div class="">
+            <div class="search-inner clearfix">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="Search" name="s" class="search-input placeholder" autocomplete="off">
+              <input type="submit" value="Search">
+              <div class="search-close">
+                <a href="#"><i class="line-icon-close"></i></a>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="section">
+          <div id="topbar-hold" class="nav-hold">
+            <nav class="navbar" role="navigation">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <!-- Site Name -->
+                <a class="site-name navbar-brand" href="../homepage/index-slider-parallax.html"></a>
+              </div>
+              <!-- Main Navigation menu Starts -->
+              <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right sm" data-smartmenus-id="1628865171761344">
+                <li>
+                  <a href="#">Menu 1</a>
+                </li>
+                <li class="dropdown full-width">
+                  <a href="#" class="dropdown-toggle top-menu" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Menu 2</a>
+                  <ul class="dropdown-menu">
+                    <li class="column">
+                      <a href="#" class="menu-title">Title 1</a>
+                      <ul>
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                        <li><a href="#">Submenu 3</a></li>
+                        <li><a href="#">Submenu 4</a></li>
+                      </ul>
+                    </li>
+                    <li class="column">
+                      <a href="#" class="menu-title">Title 2</a>
+                      <ul>
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                        <li><a href="#">Submenu 3</a></li>
+                        <li><a href="#">Submenu 4</a></li>
+                      </ul>
+                    </li>
+                    <li class="column">
+                      <a href="#" class="menu-title">Title 3</a>
+                      <ul>
+                        <li><a href="#">Submenu 5</a></li>
+                        <li><a href="#">Submenu 6</a></li>
+                        <li><a href="#">Submenu 7</a></li>
+                        <li><a href="#">Submenu 8</a></li>
+                      </ul>
+                    </li>
+                    <li class="column">
+                      <a href="#" class="menu-title">Title 4</a>
+                      <ul>
+                        <li><a href="#">Submenu 9</a></li>
+                        <li><a href="#">Submenu 10</a></li>
+                        <li><a href="#">Submenu 11</a></li>
+                        <li><a href="#">Submenu 12</a></li>
+                      </ul>
+                    </li>
+                    <li class="column">
+                      <a href="#" class="menu-title">Title 5</a>
+                      <ul>
+                        <li><a href="#">Submenu 13</a></li>
+                        <li><a href="#">Submenu 14</a></li>
+                        <li><a href="#">Submenu 15</a></li>
+                        <li><a href="#">Submenu 16</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-title">Title 6</a>
+                      <ul>
+                        <li><a href="#">Submenu 17</a></li>
+                        <li><a href="#">Submenu 18</a></li>
+                        <li><a href="#">Submenu 19</a></li>
+                        <li><a href="#">Submenu 20</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle top-menu" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Menu 3</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-delay="0" data-hover="dropdown" data-close-others="false">Submenu 1</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Sub Submenu 1</a></li>
+                        <li><a href="#">Sub Submenu 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-delay="0" data-hover="dropdown" data-close-others="false">Submenu 2</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Sub Submenu 1</a></li>
+                        <li><a href="#">Sub Submenu 2</a></li>
+                        <li><a href="#">Sub Submenu 3</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-delay="0" data-hover="dropdown" data-close-others="false">Submenu 3</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Sub Submenu 1</a></li>
+                        <li><a href="#">Sub Submenu 2</a></li>
+                        <li><a href="#">Sub Submenu 3</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-delay="0" data-hover="dropdown" data-close-others="false">Submenu 4</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Sub Submenu 1</a></li>
+                        <li><a href="#">Sub Submenu 2</a></li>
+                        <li><a href="#">Sub Submenu 3</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle top-menu" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Menu 4</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Submenu 1</a></li>
+                    <li><a href="#">Submenu 2</a></li>
+                    <li><a href="#">Submenu 3</a></li>
+                    <li><a href="#">Submenu 4</a></li>
+                    <li><a href="#">Submenu 5</a></li>
+                    <li><a href="#">Submenu 6</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown full-width">
+                  <a href="#" class="dropdown-toggle top-menu" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">Menu 5</a>
+                  <ul class="dropdown-menu grid-4">
+                    <li class="li-2-columns"><span class="menu-title">Title 1</span></li>
+                    <li class="li-2-columns"><span class="menu-title">Title 2</span></li>
+                    <li>
+                      <ul>
+                        <li><a href="#">Submenu 1</a></li>
+                        <li><a href="#">Submenu 2</a></li>
+                        <li><a href="#">Submenu 3</a></li>
+                        <li><a href="#">Submenu 4</a></li>
+                        <li><a href="#">Submenu 5</a></li>
+                        <li><a href="#">Submenu 6</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li><a href="#">Submenu 7</a></li>
+                        <li><a href="#">Submenu 8</a></li>
+                        <li><a href="#">Submenu 9</a></li>
+                        <li><a href="#">Submenu 10</a></li>
+                        <li><a href="#">Submenu 11</a></li>
+                        <li><a href="#">Submenu 12</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li><a href="#">Submenu 13</a></li>
+                        <li><a href="#">Submenu 14</a></li>
+                        <li><a href="#">Submenu 15</a></li>
+                        <li><a href="#">Submenu 16</a></li>
+                        <li><a href="#">Submenu 17</a></li>
+                        <li><a href="#">Submenu 18</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li><a href="#">Submenu 19</a></li>
+                        <li><a href="#">Submenu 20</a></li>
+                        <li><a href="#">Submenu 21</a></li>
+                        <li><a href="#">Submenu 22</a></li>
+                        <li><a href="#">Submenu 23</a></li>
+                        <li><a href="#">Submenu 24</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="li-search"><a href="#" class="toggle-search"><i class="line-icon-magnifier"></i></a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle top-menu lang" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">EN</a>
+                  <ul class="dropdown-menu">
+                    <li><a data-lang="es" class="lang" href="#">ES</a></li>
+                    <li><a data-lang="fr" class="lang" href="#">FR</a></li>
+                    <li><a data-lang="it" class="lang" href="#">IT</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- Main Navigation menu ends-->
+          </nav>
+          </div>
+        </div>
+      </div>
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      <header class="height-full center parallax" data-img="bg/bg-7.jpg" style="height: 800px; background-image: url(&quot;../../common-files/images/bg/bg-7.jpg&quot;); background-position: 50% 0px;">
+        <div class="section-overlay"></div>
+        <div class="container top-element">
+          <div class="row top-text fade-text">
+            <h1 class="well-come">Modern Family Tribe</h1>
+            <div class="col-md-8 col-md-offset-2">
+              <p class="intro-message" style="line-height: 35px;">Make Meaningful Human Connection and Share Wonderful Northern Experiences in a Cosy Home in Finland</p>
+              <a href="#" class="btn button-line button-white btn-rounded hover-effect next-section m-r-30">Learn more</a>
+              <a href="#" class="btn btn-white btn-rounded hover-effect next-section">Join Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-down next-section"><span></span></div>
+      </header>
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      <section id="the-big-project" class="section-projects clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="center m-b-30 p-t-30">
+              <h3 class="section-title">Join a Community of Semi-Nomadic Conscious Humans<br></h3>
+              <p class="p-b-30">Specialized home rental to make your semi-nomad lifestyle easy, mindful and human</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-wrapper">
+          <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="0">
+            <img src="../../common-files/images/blog/1.jpg" alt="1">
+            <figcaption>
+              <h2>Nature <span>Discover</span></h2>
+              <p>Explore the wonders of the world</p>
+              <a href="#">View more</a>
+            </figcaption>
+          </figure>
+          <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="200">
+            <img src="../../common-files/images/blog/2.jpg" alt="2">
+            <figcaption>
+              <h2>Conscious <span>Parenting</span></h2>
+              <p>Making parenthood enjoyable and creative together</p>
+              <a href="#">View more</a>
+            </figcaption>
+          </figure>
+          <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="400">
+            <img src="../../common-files/images/blog/3.jpg" alt="3">
+            <figcaption>
+              <h2>Human <span>Connection</span></h2>
+              <p>Meet different people with the same values</p>
+              <a href="#">View more</a>
+            </figcaption>
+          </figure>
+          <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="600">
+            <img src="../../common-files/images/blog/4.jpg" alt="4">
+            <figcaption>
+              <h2>Spiritual <span>Growth</span></h2>
+              <p>Being each other's guides on the way to our Higher Selves</p>
+              <a href="#">View more</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      <section class="section-portfolio p-t-60 portfolio-single clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="portfolio">
+                <div class="portfolio-thumbnail">
+                  <figure>
+                    <div class="owl-carousel" style="">
+                      <div class="item">
+                        <img src="../../common-files/images/gallery/v1.jpg" alt="24">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/v5.jpg" alt="22">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/v3.jpg" alt="23">
+                      </div>
+                      
+                      
+                    </div>
+                  </figure>
+                </div>
+                <div class="portfolio-text">
+                  <div class="portfolio-content">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h3 class="section-title">Pilot Project : Vuokatti, in the Heart of Finland</h3>
+                        <p>Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. Probarem, quae ille diceret? Perdiscere ludus esset.
+                        Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat imperiale praeceptum, dispic.</p>
+                        <p>
+                          Quam ob rem circumspecta cautela observatum est deinceps et cum edita montium petere coeperint grassatores, loci iniquitati milites cedunt. ubi autem in planitie potuerint reperiri, quod contingit adsidue, nec exsertare lacertos nec crispare permissi tela, quae vehunt bina vel terna, pecudum ritu inertium trucidantur.
+                        </p>
+                        <p>Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut tractus unius soli illis umquam placet.
+                        </p>
+                      </div>
+                      <div class="col-md-3 col-md-offset-1 portfolio-sidebar">
+                        <h4 class="section-title">Who is it for?</h4>
+                        <p>Humans and Martians</p>
+                        <h4 class="section-title">We begin on</h4>
+                        <p>01 November 2021</p>
+                        <h4 class="section-title">Renting duration</h4>
+                        <p>Minimum 6 Months</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      <section class="section-portfolio portfolio-single bg-gray-light">
+        <div class="container">
+          <h2 class="section-title text-left m-t-60">Your Future Home Looks Like This</h2>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="portfolio">
+                <div class="portfolio-thumbnail">
+                  <figure>
+                      <img src="../../common-files/images/gallery/opaali-1.jpg" alt="25">  
+                  </figure>
+                </div>
+                <div class="portfolio-thumbnail m-t-30">
+                  <figure>
+                    <div class="owl-carousel" style="">
+                      <div class="item">
+                        <img src="../../common-files/images/gallery/21.jpg" alt="21">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/22.jpg" alt="22">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/23.jpg" alt="23">
+                      </div>
+                      
+                      
+                    </div>
+                  </figure>
+                </div>
+                <div class="video m-t-30">
+                  <div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe src="http://player.vimeo.com/video/25708134?title=0&amp;byline=0&amp;portrait=0" id="fitvid0"></iframe></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 fixed-column">
+              <div class="portfolio-text">
+                <div class="portfolio-content">
+                  <h4 class="section-title m-t-0 p-t-0">House Information</h4>
+                  <p>Finnish chalet located in the mountains next to the slopes. You can stand on your skis or snowboard and jump on the slopes. Really, just like this.<br>
+The place is surrounded by a beautiful pine forest. And you'll enjoy the warmth of the typical sauna and fireplace at home.</p>
+                  <p></p>
+                  <h4 class="section-title">Inside commodities</h4>
+                  <p>Total area: 83-95 m2<br>
+3 rooms<br>
+living room<br>
+kitchen<br>
+loft<br>
+terrace<br>
+bathroom<br>
+sauna<br>
+storage room<br>
+<br></p>
+                  <h4 class="section-title">Special Options</h4>
+                  <p>All the three rooms are transformable accordingly to your need. It can become a bedroom, an office, a guest room, a playground for children, etc...<br>
+<br>
+We will make it in the way you need it.<br>
+<br></p>
+                  <h4 class="section-title">Territory information</h4>
+                  <p>There are trees and slopes and snow in winter </p>
+                  <h4 class="section-title">Pricing</h4>
+                  <p>2000€ / Month<br>
+All charges included (see below for details)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      <section class="section-services services-wrap">
+        <div class="container services p-b-30">
+          <div class="row">
+            <div class="col-md-12 center">
+              <h3 class="section-title m-b-60">What we propose</h3>
+            </div>
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="300">
+              <div class="service-desc">
+                <i class="icon-basic-book-pencil dis-block center m-b-10"></i>
+                <h4 class="service-title center">Clean Design</h4>
+                <p class="service-description justify">
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                </p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="500">
+              <div class="service-desc">
+                <i class="icon-basic-paperplane dis-block center m-b-10"></i>
+                <h4 class="service-title center">Full responsive</h4>
+                <p class="service-description justify">
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                </p>
+              </div>
+            </div>
+            <!-- Single Service ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="700">
+              <div class="service-desc">
+                <i class="icon-basic-video dis-block center m-b-10"></i>
+                <h4 class="service-title center">Video Ready</h4>
+                <p class="service-description justify">
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                </p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="900">
+              <div class="service-desc">
+                <i class="icon-basic-book-pencil dis-block center m-b-10"></i>
+                <h4 class="service-title center">Clean Design</h4>
+                <p class="service-description justify">
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                </p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="1100">
+              <div class="service-desc">
+                <i class="icon-basic-bolt dis-block center m-b-10"></i>
+                <h4 class="service-title center">Regular Updates</h4>
+                <p class="service-description justify">
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                </p>
+              </div>
+            </div>
+            <!-- Single Service ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="1300">
+              <div class="service-desc">
+                <i class="icon-basic-helm dis-block center m-b-10"></i>
+                <h4 class="service-title center">Premium Support</h4>
+                <p class="service-description justify">
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                  Cillum laboris consequat, qui elit retro next level skateboard freegan hella.
+                </p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+          </div>
+        </div>
+      </section>
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      <section class="section-blog blog-single clearfix bg-gray-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="post">
+                <div class="post-thumbnail">
+                  <figure>
+                    <div style="opacity: 1; display: block;">
+                     <div class="item">
+                        <img src="../../common-files/images/gallery/26b.jpg" alt="26b">
+                      </div></div>
+                  </figure>
+                </div>
+                
+                <div class="post-text">
+                  <div class="post-title" style="margin-bottom: 20px;">
+                    Want to know more about our Family ?
+                  </div>
+                  <div class="post-content">
+                    <p>We are a family of three - Thomas, Kristina and Elio. During the past three years, we have lived in Bordeaux (France), Saint-Petersburg (Russia), Silvi (Italy) and Tallinn (Estonia). Thomas is educated as Mechanical Engineer and work now as a Creative Digital Entrepreneur. Kristina is educated in Public Relations and Advertising and she recently got a Bachelor in Hospitality Management. She now is a wonderful Mom and spend time developing Creative Projects as an Entrepreneur. Elio arrived on this planet in Summer 2020 and his biggest mission is Exploration of the wonders of the world and human life.</p>
+                    <p>We moved a lot around Europe and found out that one thing is missing to all of these travels: COMMUNITY.</p>
+                    <blockquote><i class="fa fa-quote-right pull-left"></i>
+                      <p class="blockquote">Travel brings power and love back into your life. - Rumi</p>
+                    </blockquote>
+                    
+                    <p>That is why we created this project and wanted to share it with the world, and you. We want to meet new like-minded people. We want to create a life of exploration and connection, growing together on the way. Come and join us. Let's make this life incredible and exciting together !</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!--End  Blog Single --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      <section class="section-portfolio">
+        <div class="container">
+          <div class="portfolioContainer no-space" style="position: relative; height: 955px;">
+            <figure class="effect-jazz branding" style="position: absolute; left: 0px; top: 5px;">
+              <img src="../../common-files/images/gallery/18.jpg" alt="7">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Design Artworks</h2>
+                      <p>Art, Photography</p>
+                      <a href="../../common-files/images/gallery/18.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz design photography" style="position: absolute; left: 380px; top: 5px;">
+              <img src="../../common-files/images/gallery/8.jpg" alt="8">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>London Industrial</h2>
+                      <p>City, Architecture</p>
+                      <a href="../../common-files/images/gallery/8.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding" style="position: absolute; left: 760px; top: 5px;">
+              <img src="../../common-files/images/gallery/17.jpg" alt="17">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Desktop Modern</h2>
+                      <p>Modern, Art</p>
+                      <a href="../../common-files/images/gallery/17.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz photography" style="position: absolute; left: 0px; top: 242px;">
+              <img src="../../common-files/images/gallery/20.jpg" alt="20">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Cooking Spicy</h2>
+                      <p>Table, Cooking</p>
+                      <a href="../../common-files/images/gallery/20.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz design" style="position: absolute; left: 380px; top: 242px;">
+              <img src="../../common-files/images/gallery/5.jpg" alt="5">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Season Closup</h2>
+                      <p>Landscape, Autumn</p>
+                      <a href="../../common-files/images/gallery/5.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding photography" style="position: absolute; left: 760px; top: 242px;">
+              <img src="../../common-files/images/gallery/21.jpg" alt="21">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Old Photography</h2>
+                      <p>Camera, Old School</p>
+                      <a href="../../common-files/images/gallery/21.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding" style="position: absolute; left: 0px; top: 480px;">
+              <img src="../../common-files/images/gallery/3.jpg" alt="3">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Field in Wind</h2>
+                      <p>Season, Landscape</p>
+                      <a href="../../common-files/images/gallery/3.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz photography" style="position: absolute; left: 380px; top: 480px;">
+              <img src="../../common-files/images/gallery/2.jpg" alt="2">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Beach Time</h2>
+                      <p>Holydays, Wind</p>
+                      <a href="../../common-files/images/gallery/2.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz design" style="position: absolute; left: 760px; top: 480px;">
+              <img src="../../common-files/images/gallery/1.jpg" alt="1">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Industrial 2015</h2>
+                      <p>Architecture, Art</p>
+                      <a href="../../common-files/images/gallery/1.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding design photography" style="position: absolute; left: 0px; top: 717px;">
+              <img src="../../common-files/images/gallery/14.jpg" alt="14">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Sea Landscape</h2>
+                      <p>Sea, Photography</p>
+                      <a href="../../common-files/images/gallery/14.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding" style="position: absolute; left: 380px; top: 717px;">
+              <img src="../../common-files/images/gallery/15.jpg" alt="15">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Closup Field</h2>
+                      <p>Landscape, Blur</p>
+                      <a href="../../common-files/images/gallery/15.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz photography" style="position: absolute; left: 760px; top: 717px;">
+              <img src="../../common-files/images/gallery/16.jpg" alt="16">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Coffee Breakfeast</h2>
+                      <p>Art, Photography</p>
+                      <a href="../../common-files/images/gallery/16.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+          </div>
+        </div>    
+      </section>
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      <section class="section-call-action newsletter" style="margin-bottom:20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <h4 class="section-title">Subscribe to our Newsletter.</h4>
+              <p class="section-title c-gray">You'll receive information about our project. We will not share your email.</p>
+            </div>
+            <div class="col-md-5">
+              <div class="inline-form">
+                <input placeholder="Enter Your Email" class="form-control placeholder" type="text">
+                <button type="submit" class="btn btn-lg m-b-0 btn-dark">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      <section class="section-contact contact-wrap bg-dark">
+        <div class="container p-t-60 p-b-60 center animated" data-animation="fadeIn" data-animation-delay="500">
+          <div class="center section-title">
+            <h3 class="section-title">Contact Us<br></h3>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <form class="contact-form support-form">
+                <input id="name" class="input-field form-item field-name placeholder" type="text" required="required" name="contact-name" placeholder="Name">
+                <input id="email" class="input-field form-item field-email placeholder" type="text" required="required" name="contact-email" placeholder="Email">
+                <input id="subject" class="input-field form-item field-subject placeholder" type="text" required="required" name="contact-subject" placeholder="Subject">
+                <textarea id="message" class="textarea-field form-item field-message placeholder" rows="5" name="contact-message" placeholder="Message"></textarea>
+                <button type="submit" class="button-line btn button-white btn-rounded hover-effect m-t-30">Send message</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <h4 style="text-align: left;">Join Our Project</h4>
+              <p class="m-t-10" style="text-align: left;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu sem ante. Nullam quis risus eu purus commodo dignissim. Donec iaculis ac ex vel posuere. Sed posuere, elit vitae mattis condimentum, quam urna.
+              </p>
+              <br>
+              <p style="text-align: left;">
+                Nec minus feminae quoque calamitatum participes fuere similium. nam ex hoc quoque sexu peremptae sunt originis altae conplures, adulteriorum flagitiis obnoxiae vel stuprorum. inter quas notiores fuere Claritas et Flaviana, quarum altera cum duceretur ad mortem, indumento, quo vestita erat, abrepto rmissa est. ideoque carnifex nefas admisisse convictus inmane, vivus exustus est.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="map-contact m-t-10">
+          <div class="map" id="contact-map-bottom" style=""></div>
+        </div>
+      </section>
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      <div class="section-footer footer-wrap">
+        <div class="container footer center">
+          <div class="row">
+            <div class="col-lg-12">
+              <h4 class="footer-title">
+                <!-- Footer Title -->
+                <a class="site-name" href="#">
+                  <img src="../../common-files/images/logo-dark.png" alt="logo" class="animated fadeInUp" data-animation="fadeInUp" data-animation-delay="200">
+                </a>
+              </h4>
+              <!-- Social Links -->
+              <div class="social-icons">
+                <ul>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="200"><i class="fa fa-facebook-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="300"><i class="fa fa-twitter-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="400"><i class="fa fa-google-plus-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="500"><i class="fa fa-pinterest-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="600"><i class="fa fa-flickr"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="700"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      <div class="section-copyright">
+        <div class="container">
+          <p class=" center">Modern Family Tribe All rights reserved © 2021</p>
+        </div>
+      </div>
+      <!-- End Copyright Light --></div></body>  <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+  <script src="../../common-files/plugins/jquery/jquery-1.11.1.min.js"></script>
+  <script src="../../common-files/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="../../common-files/plugins/modernizr/modernizr.js"></script>
+  <script src="../../common-files/plugins/appear/jquery.appear.js"></script>
+  <script src="../../common-files/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.js"></script>
+  <!-- BEGIN PAGE SCRIPTS -->
+  <script src="../../common-files/plugins/backstretch/backstretch.min.js"></script>
+  <script src="../../common-files/plugins/parallax/scripts/jquery.parallax-1.1.3.js"></script>
+  <script src="../../common-files/plugins/bxslider/jquery.bxslider.min.js"></script>
+  <script src="../../common-files/plugins/owl/owl.carousel.min.js"></script>
+  <script src="../../common-files/plugins/text-rotator/jquery.simple-text-rotator.min.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/classie.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/svganimations.js"></script>
+  <script src="../../common-files/plugins/video/jquery.mb.YTPlayer.min.js"></script>
+  <script src="../../common-files/plugins/magnific/jquery.magnific-popup.min.js"></script>
+  <script src="../../common-files/plugins/rateit/jquery.rateit.min.js"></script> 
+  <script src="../../common-files/js/ecommerce.js"></script>
+  <script src="../../common-files/plugins/video/jquery.fitvids.js"></script>
+  <script src="../../common-files/plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="../../common-files/plugins/animated-background/demo-2.js"></script>
+  <script src="../../common-files/plugins/slider-revolution/examples/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
+  <script src="../../common-files/plugins/slider-revolution/examples/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="../../common-files/js/slider-revolution.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/classie.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/svganimations.js"></script>
+  <script src="../../common-files/plugins/smart-menu/jquery.smartmenus.min.js"></script>
+  <!-- END PAGE SCRIPTS -->
+<script src="../../common-files/js/application.js"></script>
+</body>
+</html><script src="http://maps.google.com/maps/api/js?sensor=true"></script><script src="../../common-files/plugins/google-maps/gmaps.min.js"></script><script src="https://google-maps-utility-library-v3.googlecode.com/svn-history/r391/trunk/markerwithlabel/src/markerwithlabel.js"></script><script src="../../common-files/js/map.js"></script>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <title>Make Frontend Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../common-files/css/style.min.css"/>
+    <link rel="stylesheet" id="scheme-source" href="../../common-files/css/schemes/gray.css" />
+    <!-- [if lt IE 9]>
+      <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+  </head>
+  <body>
+
+    <div id="page" class="page">
+
+      <!-- Begin Contact Map Full Width Dark -->
+      <section class="section-contact full-map contact-wrap bg-dark height-full">
+        <div class="map-container">
+            <div id="full-map"></div>
+        </div>
+        <div class="container contact center animated p-t-120" data-animation="fadeIn" data-animation-delay="300">
+          <div class="center section-title">
+            <h3 class="section-title">Leave a message</h3>
+          </div>
+          <div class="col-md-6">
+            <div class="confirmation">
+              <p><span class="fa fa-check"></span></p>
+            </div>
+            <form class="contact-form support-form">
+              <div class="col-lg-12">
+                <input id="name" class="input-field form-item field-name" type="text" required="required" name="contact-name" placeholder="Name" />
+                <input id="email" class="input-field form-item field-email" type="text" required="required" name="contact-email" placeholder="Email" />
+                <input id="subject" class="input-field form-item field-subject" type="text" required="required" name="contact-subject" placeholder="Subject" />
+                <textarea id="message" class="textarea-field form-item field-message" rows="5" name="contact-message" placeholder="Message"></textarea>
+              </div>
+              <button type="submit" class="btn button-line button-white btn-rounded hover-effect">Send message</button>
+            </form>
+          </div>
+          <div class="col-md-6 text-right">
+            <h3 class="text-right section-title">Get in touch</h3>
+            <p class="contact-description text-right c-gray">
+                Quod cum ita sit, paucae domus studiorum seriis cultibus antea celebratae nunc ludibriis ignaviae torpentis exundant, vocali sonu, perflabili tinnitu fidium resultantes. denique pro philosopho cantor et in locum oratoris doctor artium ludicrarum accitur et bybliothecis sepulcrorum ritu in perpetuum clausis organa fabricantur hydraulica, et lyrae ad speciem carpentorum.
+              </p>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Form Map Full Width Dark -->
+
+    </div>
+
+    <script src="../../common-files/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="../../common-files/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="../../common-files/plugins/modernizr/modernizr.js"></script>
+    <script src="../../common-files/plugins/appear/jquery.appear.js"></script>
+   <script src="../../common-files/plugins/smart-menu/jquery.smartmenus.min.js"></script>
+    <!-- BEGIN PAGE SCRIPTS -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="../../common-files/plugins/google-maps/gmaps.min.js"></script>
+    <script src="https://google-maps-utility-library-v3.googlecode.com/svn-history/r391/trunk/markerwithlabel/src/markerwithlabel.js"></script>
+    <script src="../../common-files/js/map.js"></script>
+    <!-- END PAGE SCRIPTS -->
+    <script src="../../common-files/js/application.js"></script>
+  </body>
+</html>
