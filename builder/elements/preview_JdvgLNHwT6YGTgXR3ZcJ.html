@@ -1,0 +1,971 @@
+<!DOCTYPE HTML>
+  <html lang="en-US">
+    <head>
+      <title>Make Frontend Website</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../../common-files/css/style.min.css"/>
+      <link rel="stylesheet" id="scheme-source" href="../../common-files/css/schemes/gray.css" />
+      <!-- BEGIN PAGE STYLE -->
+      <link rel="stylesheet" href="../../common-files/plugins/owl/owl.carousel.min.css">
+      <link rel="stylesheet" href="../../common-files/plugins/bxslider/jquery.bxslider.min.css" />
+      <link rel="stylesheet" href="../../common-files/plugins/text-rotator/simpletextrotator.min.css">
+      <link rel="stylesheet" href="../../common-files/plugins/slider-revolution/examples/rs-plugin/css/settings.css" media="screen" />
+      <link rel="stylesheet" href="../../common-files/plugins/magnific/magnific-popup.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="../../common-files/plugins/rateit/rateit.css"rel="stylesheet">
+      <!-- END PAGE STYLE -->
+      <!-- [if lt IE 9]>
+        <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif] -->
+    </head>
+    <body>
+      <!-- BEGIN PRELOADER -->
+      <div class="loader-overlay">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </div>
+      <!-- END PRELOADER --><head><script type="text/javascript" data-name="TokenSigning">(function() {
+    // Promises
+    var _eid_promises = {};
+    // Turn the incoming message from extension
+    // into pending Promise resolving
+    window.addEventListener("message", function(event) {
+        if (event.source !== window) return;
+        if (event.data.src && (event.data.src === "background.js")) {
+            console.log("Page received: ");
+            console.log(event.data);
+            // Get the promise
+            if (event.data.nonce) {
+                var p = _eid_promises[event.data.nonce];
+                // resolve
+                if (event.data.result === "ok") {
+                    if (event.data.signature !== undefined) {
+                        p.resolve({hex: event.data.signature});
+                    } else if (event.data.version !== undefined) {
+                        p.resolve(event.data.extension + "/" + event.data.version);
+                    } else if (event.data.cert !== undefined) {
+                        p.resolve({hex: event.data.cert});
+                    } else {
+                        console.log("No idea how to handle message");
+                        console.log(event.data);
+                    }
+                } else {
+                    // reject
+                    p.reject(new Error(event.data.result));
+                }
+                delete _eid_promises[event.data.nonce];
+            } else {
+                console.log("No nonce in event msg");
+            }
+        }
+    }, false);
+
+    window.TokenSigning = function() {
+        function nonce() {
+            var val = "";
+            var hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (var i = 0; i < 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+
+        function messagePromise(msg) {
+            return new Promise(function(resolve, reject) {
+                // amend with necessary metadata
+                msg["nonce"] = nonce();
+                msg["src"] = "page.js";
+                // send message
+                window.postMessage(msg, "*");
+                // and store promise callbacks
+                _eid_promises[msg.nonce] = {
+                    resolve: resolve,
+                    reject: reject
+                };
+            });
+        }
+        this.getCertificate = function(options) {
+            var msg = {type: "CERT", lang: options.lang, filter: options.filter};
+            console.log("getCertificate()");
+            return messagePromise(msg);
+        };
+        this.sign = function(cert, hash, options) {
+            var msg = {type: "SIGN", cert: cert.hex, hash: hash.hex, hashtype: hash.type, lang: options.lang, info: options.info};
+            console.log("sign()");
+            return messagePromise(msg);
+        };
+        this.getVersion = function() {
+            console.log("getVersion()");
+            return messagePromise({
+                type: "VERSION"
+            });
+        };
+    };
+})();</script></head><body><div id="page" class="page">
+        
+    <!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      
+      <!-- End Copyright Light --><!--  Begin Topbar simple -->
+      <div class="topnav fixed-topnav bg-dark topnav-top transparent">
+        <form action="#" class="form-search" id="top-search" method="get" role="form">
+          <div class="container">
+            <div class="search-inner clearfix">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="Search" name="s" class="search-input placeholder" autocomplete="off">
+              <input type="submit" value="Search">
+              <div class="search-close">
+                <a href="#"><i class="line-icon-close"></i></a>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="section">
+          <div id="topbar-hold" class="nav-hold container">
+            <nav class="navbar" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+              <!-- Site Name -->
+              <a class="site-name navbar-brand" href="../homepage/index-slider-parallax.html"></a>
+            </div>
+            <!-- Main Navigation menu Starts -->
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right sm" data-smartmenus-id="16281660979023418">
+                <li>
+                  <a href="#the-big-project" style="color: rgb(245, 245, 245); font-weight: 500; text-transform: uppercase;">The Big Project</a>
+                </li>
+                <li>
+                  <a href="#">Pilot Project</a>
+                </li>
+                <li>
+                  <a href="#">Homes</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Our Family</a>
+                </li>
+                <li>
+                  <a href="#">Gallery</a>
+                </li>
+                <li>
+                  <a href="#" class="next-section">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Main Navigation menu ends-->
+          </nav>
+          </div>
+        </div>
+      </div>
+      <!--  End Topbar simple --><!-- Begin Header Parallax Image Full Height -->
+      <header class="height-full center parallax" data-img="bg/bg-7.jpg" style="height: 800px; background-image: url(&quot;../../common-files/images/bg/bg-7.jpg&quot;); background-position: 50% 0px;">
+        <div class="section-overlay"></div>
+        <div class="container top-element">
+          <div class="row top-text fade-text">
+            <h1 class="well-come">Modern Family Tribe</h1>
+            <div class="col-md-8 col-md-offset-2">
+              <p class="intro-message" style="line-height: 35px;">Specialized home rental around the world.<br>
+Make your semi-nomad lifestyle easy, mindful and human.<br>
+<br>
+We are begining with Finland.</p>
+              <a href="#" class="btn button-line button-white btn-rounded hover-effect next-section m-r-30">Learn more</a>
+              <a href="#" class="btn btn-white btn-rounded hover-effect next-section">Join Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-down next-section"><span></span></div>
+      </header>
+      <!-- End Header Parallax Image Full Height --><!-- Begin Recent Works -->
+      <section id="the-big-project" class="section-projects clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="center m-b-30 p-t-30">
+              <h3 class="section-title">Join a Community of Semi-Nomadic Conscious Humans<br></h3>
+              <p class="p-b-30">We are dreaming about having a world without borders and limits, where you can experience every country easily and peacefully.<br>
+                And at the same time, belonging to a community where everyone shares the same vision and sense of life.
+                <br>
+                <br>
+                We were dreaming about it. And we began to bring this idea to life.
+                <br>
+                <br>
+                We propose you to become a part of a community of Semi-Nomadic families, make meaningful human connections
+                <br>
+                and share wonderful experiences in different countries.</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-wrapper">
+            <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="400">
+                <img src="../../common-files/images/blog/3.jpg" alt="3">
+                <figcaption>
+                    <h2>Human <span>Connection</span></h2>
+                    <p>Meet different people with shared values. </p>
+                </figcaption>
+            </figure>
+          <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="600">
+            <img src="../../common-files/images/blog/4.jpg" alt="4">
+            <figcaption>
+              <h2>Spiritual <span>Growth</span></h2>
+              <p>Being each other's guides on the way to our Higher Selves</p>
+            </figcaption>
+          </figure>
+          <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="200">
+            <img src="../../common-files/images/blog/2.jpg" alt="2">
+            <figcaption>
+              <h2>Conscious <span>Parenting</span></h2>
+              <p>Making parenthood enjoyable and creative together</p>
+            </figcaption>
+          </figure>
+          <figure class="effect-lily mix work-item branding animated" data-animation="fadeIn" data-animation-delay="0">
+            <img src="../../common-files/images/blog/1.jpg" alt="1">
+            <figcaption>
+              <h2>World <span>Discovery</span></h2>
+              <p>Explore the wonders of the world</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <!-- End Recent Works --><!-- Begin  Portfolio Single -->
+      <section class="section-portfolio p-t-60 portfolio-single clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="portfolio">
+                <div class="portfolio-thumbnail">
+                  <figure>
+                    <div class="owl-carousel" style="">
+                      <div class="item">
+                        <img src="../../common-files/images/gallery/v1.jpg" alt="24">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/v5.jpg" alt="22">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/v3.jpg" alt="23">
+                      </div>
+                      
+                      
+                    </div>
+                  </figure>
+                </div>
+                <div class="portfolio-text">
+                  <div class="portfolio-content">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h3 class="section-title">Pilot Project : Vuokatti, in the Heart of Finland</h3>
+                        <p style="text-align: justify;">The pilot project is the first step in building this community of Semi-nomadic families. We are looking for 3 families who will join us and co-create this adventure together.</p>
+                        <p style="text-align: justify;">Finland is known as the land of a thousand lakes. Its nature is very varied and rich. There are forests, mountains, rivers. In winter you can ski and snowboard, ice diving or go to have a ride with the dog flock. It the summer you can go mountain biking, hiking, fishing, swimming. You can really find your place in all four seasons there.</p>
+                        <p style="text-align: justify;">Vuokatti is a holiday village located on the hills next to the slopes. It is calm and relaxing. There are different activities around such as swimming pool, gym, kids activity park, aqua-park, bowling etc. It’s in 10 minutes ride from little town Sotkamo with shops and restaurants. 2 hours away from the international airport of Ouly and 6 hours away from the capital of Finland- Helsinki. If you go even more north from Vuokatti you can see the Northern lights in Lapland and visit the North Polar Circle.</p>
+                        <p style="text-align: justify;">50meters away from the slopes are located our 2 Finnish chalets - each divided in 2 houses with independent entrances. There is a big free area that we are planning to make as a little garden in the summer.<br>
+<br></p>
+                      </div>
+                      <div class="col-md-3 col-md-offset-1 portfolio-sidebar">
+                        <h4 class="section-title">Who is it for?</h4>
+                        <p>• Travel Lifestyle Families<br>
+• Location Independent
+<br>
+• Passive Income
+<br>
+• Digital Nomads
+<br>
+• Remote Workers
+<br></p>
+                        <h4 class="section-title">We begin on</h4>
+                        <p>01 November 2021<br>
+(with possibility to welcome you later, let us know your dates)</p>
+                        <h4 class="section-title">Renting duration</h4>
+                        <p>Minimum 6 Months</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9368632.208347538!2d18.82376649191549!3d62.42158035134694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4682f16866c1ee3f%3A0xa0146d8a395b970!2s88610%20Vuokatti%2C%20Finland!5e0!3m2!1sen!2sfr!4v1629381608208!5m2!1sen!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="yes" loading="lazy"></iframe>  
+        </div>
+      </section>
+      <!--End  Portfolio Single --><!-- Begin  Portfolio Single -->
+      <section class="section-portfolio portfolio-single bg-gray-light m-t-20">
+        <div class="container">
+          <h2 class="section-title text-left m-t-20">Your Future Home Looks Like This</h2>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="portfolio">
+                <div class="portfolio-thumbnail">
+                  <figure>
+                      <img src="../../common-files/images/gallery/opaali-1.jpg" alt="25">  
+                  </figure>
+                </div>
+                <div class="portfolio-thumbnail m-t-30">
+                  <figure>
+                    <div class="owl-carousel" style="">
+                      <div class="item">
+                        <img src="../../common-files/images/gallery/21.jpg" alt="21">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/22.jpg" alt="22">
+                      </div><div class="item">
+                        <img src="../../common-files/images/gallery/23.jpg" alt="23">
+                      </div>
+                      
+                      
+                    </div>
+                  </figure>
+                </div>
+                <div class="video m-t-30">
+                  <div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe width="560" height="315" src="https://www.youtube.com/embed/_IZwveTRAhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 fixed-column">
+              <div class="portfolio-text">
+                <div class="portfolio-content">
+                  <h4 class="section-title m-t-0 p-t-0">House Information</h4>
+                  <p>Finnish chalet located in the mountains next to the slopes. You can stand on your skis or snowboard and jump on the slopes. Really, just like this.<br>
+The place is surrounded by a beautiful pine forest. And you'll enjoy the warmth of the typical sauna and fireplace at home.
+<br>
+Each chalet is divided in two homes with indepedent entrances.</p>
+                  <p></p>
+                  <h4 class="section-title">Inside commodities</h4>
+                  <p>Total area: 83-95 m2<br>
+3 rooms<br>
+living room<br>
+kitchen<br>
+loft<br>
+terrace<br>
+bathroom<br>
+sauna<br>
+storage room<br>
+<br></p>
+                  <h4 class="section-title">Special Options</h4>
+                  <p>All the three rooms are transformable accordingly to your need. It can become a bedroom, an office, a guest room, a playground for children, etc...<br>
+<br>
+We will make it in the way you need it.<br>
+<br></p>
+                  <h4 class="section-title">Territory information</h4>
+                  <p>There are trees and slopes and snow in winter </p>
+                  
+                  <h4 class="section-title">Pricing</h4>
+                  <p>2000€ / Month<br>
+All charges included (see below for details)</p>
+
+                  <h4 class="section-title">Availability</h4>
+                  <p>2 out of 4 homes are available<br>
+From 01 November 2021</p>
+                </div>
+              </div>
+            </div>
+      </div></div></section>
+      <!--End  Portfolio Single --><!-- Begin Services 3 columns 1 row -->
+      <section class="section-services services-wrap">
+        <div class="container services p-b-30">
+          <div class="row">
+            <div class="col-md-12 center">
+              <h3 class="section-title m-b-60">What is Included in the Renting</h3>
+            </div>
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="100">
+              <div class="service-desc">
+                <i class="icon-basic-home dis-block center m-b-10"></i>
+                <h4 class="service-title center">Home</h4>
+                <p class="service-description justify">You have a total independent living home, beautiful Finnish chalet near the ski slopes. You can request any arrangement for decoration.</p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="300">
+              <div class="service-desc">
+                <i class="icons-ecology-01 dis-block center m-b-10"></i>
+                <h4 class="service-title center">Cleaning</h4>
+                <p class="service-description justify">We provide you with a weekly cleaning service for the totality of your home. We can discuss about the time that is most comfortable for you.</p>
+              </div>
+            </div>
+            <!-- Single Service ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="500">
+              <div class="service-desc">
+                <i class="icons-seo-icons-28 dis-block center m-b-10"></i>
+                <h4 class="service-title center">Technical Assistance</h4>
+                <p class="service-description justify">A technical assistant will be available for emergency situations. You will be able to call him for any issue you would encounter at home.</p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="700">
+              <div class="service-desc">
+                <i class="icons-ecology-09 dis-block center m-b-10"></i>
+                <h4 class="service-title center">Charges</h4>
+                <p class="service-description justify">Electricity + Trash service + Water + Wi-Fi : All of these are included in the price of your rent. No need to spend time managing!</p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="900">
+              <div class="service-desc">
+                <i class="icons-documents-bookmarks-09 dis-block center m-b-10"></i>
+                <h4 class="service-title center">Administrative Assistance</h4>
+                <p class="service-description justify">You are not Finnish ? You'll probably need to spend time organising administrative documents for your stay. We'll guide you in every step of this process.</p>
+              </div>
+            </div>
+            <!-- Single Service ends -->
+            <!-- Single Service Starts -->
+            <div class="col-md-4 col-sm-6 service animated" data-animation="fadeIn" data-animation-delay="1100">
+              <div class="service-desc">
+                <i class="icons-education-science-09 dis-block center m-b-10"></i>
+                <h4 class="service-title center">Weekly Workshops</h4>
+                <p class="service-description justify">For kids and adults, we are proposing workshops every week on several themes. About science, art, history and more, you'll learn more than ever.</p>
+              </div>
+            </div>
+            <!-- Single Service Ends -->
+          </div>
+        </div>
+      </section>
+      <!-- End Services 3 columns 1 row --><!-- Begin  Blog Single -->
+      <section class="section-blog blog-single clearfix bg-gray-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="post">
+                <div class="post-thumbnail">
+                  <figure>
+                    <div style="opacity: 1; display: block;">
+                     <div class="item">
+                        <img src="../../common-files/images/gallery/26b.jpg" alt="26b">
+                      </div></div>
+                  </figure>
+                </div>
+                
+                <div class="post-text">
+                  <div class="post-title" style="margin-bottom: 20px;">
+                    Want to know more about our Family ?
+                  </div>
+                  <div class="post-content">
+                    <p>We are a family of three - Thomas, Kristina and Elio. During the past three years, we have lived in Bordeaux (France), Saint-Petersburg (Russia), Silvi (Italy) and Tallinn (Estonia). Thomas is educated as Mechanical Engineer and work now as a Creative Digital Entrepreneur. Kristina is educated in Public Relations and Advertising and she recently got a Bachelor in Hospitality Management. She now is a wonderful Mom and spend time developing Creative Projects as an Entrepreneur. Elio arrived on this planet in Summer 2020 and his biggest mission is Exploration of the wonders of the world and human life.</p>
+                    <p>We moved a lot around Europe and found out that one thing is missing to all of these travels: COMMUNITY.</p>
+                    <blockquote><i class="fa fa-quote-right pull-left"></i>
+                      <p class="blockquote">Travel brings power and love back into your life. - Rumi</p>
+                    </blockquote>
+                    
+                    <p>That is why we created this project and wanted to share it with the world, and you. We want to meet new like-minded people. We want to create a life of exploration and connection, growing together on the way. Come and join us. Let's make this life incredible and exciting together!</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!--End  Blog Single --><!-- Begin Team 3 columns Dark -->
+      <section class="section-team bg-dark">
+        <div class="container team width-900 center">
+          <h3 class="section-title">More about our Universe</h3>
+          <p class="top-txt">Here are the things we love doing, our identity, what makes us, us.<br>
+We have the same philosophy: manifesting all our creative potential in this life.</p>
+          <div class="row">
+            <div class="col-sm-4">
+                <div class="member-team animated" data-animation="fadeIn" data-animation-delay="700">
+                    <img src="../../common-files/images/people/thomas2.jpg" class="img-responsive img-circle" alt="team 1">
+                    <h4>Thomas<br></h4>
+                    <p class="c-primary">Papa Sky<br>
+                    Analyst of dreams
+                    <br>
+                    Explorer of consciousness
+                    <br>
+                    Creator of a video-game
+                    <br>
+                    Climber and Biker<br>
+                    Entrepreneur</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="member-team animated" data-animation="fadeIn" data-animation-delay="1000">
+                    <img src="../../common-files/images/people/elio3.jpg" class="img-responsive img-circle" alt="team 2">
+                    <h4>Elio</h4>
+                    <p class="c-primary">Baby Sun<br>
+                    Explorer of everything
+<br>
+                    Learner of walking straight
+<br>
+                    Eater of beautiful stones
+<br>
+                    Speaker of first words
+<br>
+                    Climber of sofas</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="member-team animated" data-animation="fadeIn" data-animation-delay="1300">
+                    <img src="../../common-files/images/people/kristina2.jpg" class="img-responsive img-circle" alt="team 3">
+                    <h4>Kristina</h4>
+                    <p class="c-primary">Mama Earth
+<br>
+Decorator of homes
+<br>
+Creator of ceramic art
+<br>
+Lover of healthy cooking
+<br>
+Writer of deep poems
+<br>
+Practitioner of yoga</p>
+                </div>
+            </div>
+        </div>
+        </div>
+      </section>
+      <!-- End Team 3 columns Dark --><!-- Begin Portfolio Boxed 3 columns no Space -->
+      <section class="section-portfolio">
+        <div class="container">
+          <div class="portfolioContainer no-space" style="position: relative; height: 955px;">
+            <figure class="effect-jazz branding" style="position: absolute; left: 0px; top: 5px;">
+              <img src="../../common-files/images/gallery/18.jpg" alt="7">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Design Artworks</h2>
+                      <p>Art, Photography</p>
+                      <a href="../../common-files/images/gallery/18.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz design photography" style="position: absolute; left: 380px; top: 5px;">
+              <img src="../../common-files/images/gallery/8.jpg" alt="8">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>London Industrial</h2>
+                      <p>City, Architecture</p>
+                      <a href="../../common-files/images/gallery/8.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding" style="position: absolute; left: 760px; top: 5px;">
+              <img src="../../common-files/images/gallery/17.jpg" alt="17">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Desktop Modern</h2>
+                      <p>Modern, Art</p>
+                      <a href="../../common-files/images/gallery/17.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz photography" style="position: absolute; left: 0px; top: 242px;">
+              <img src="../../common-files/images/gallery/20.jpg" alt="20">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Cooking Spicy</h2>
+                      <p>Table, Cooking</p>
+                      <a href="../../common-files/images/gallery/20.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz design" style="position: absolute; left: 380px; top: 242px;">
+              <img src="../../common-files/images/gallery/5.jpg" alt="5">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Season Closup</h2>
+                      <p>Landscape, Autumn</p>
+                      <a href="../../common-files/images/gallery/5.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding photography" style="position: absolute; left: 760px; top: 242px;">
+              <img src="../../common-files/images/gallery/21.jpg" alt="21">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Old Photography</h2>
+                      <p>Camera, Old School</p>
+                      <a href="../../common-files/images/gallery/21.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding" style="position: absolute; left: 0px; top: 480px;">
+              <img src="../../common-files/images/gallery/3.jpg" alt="3">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Field in Wind</h2>
+                      <p>Season, Landscape</p>
+                      <a href="../../common-files/images/gallery/3.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz photography" style="position: absolute; left: 380px; top: 480px;">
+              <img src="../../common-files/images/gallery/2.jpg" alt="2">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Beach Time</h2>
+                      <p>Holydays, Wind</p>
+                      <a href="../../common-files/images/gallery/2.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz design" style="position: absolute; left: 760px; top: 480px;">
+              <img src="../../common-files/images/gallery/1.jpg" alt="1">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Industrial 2015</h2>
+                      <p>Architecture, Art</p>
+                      <a href="../../common-files/images/gallery/1.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding design photography" style="position: absolute; left: 0px; top: 717px;">
+              <img src="../../common-files/images/gallery/14.jpg" alt="14">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Sea Landscape</h2>
+                      <p>Sea, Photography</p>
+                      <a href="../../common-files/images/gallery/14.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz branding" style="position: absolute; left: 380px; top: 717px;">
+              <img src="../../common-files/images/gallery/15.jpg" alt="15">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Closup Field</h2>
+                      <p>Landscape, Blur</p>
+                      <a href="../../common-files/images/gallery/15.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+            <figure class="effect-jazz photography" style="position: absolute; left: 760px; top: 717px;">
+              <img src="../../common-files/images/gallery/16.jpg" alt="16">
+              <figcaption>
+                  <div class="see-more">
+                    <div class="see-more-inner">
+                      <h2>Coffee Breakfeast</h2>
+                      <p>Art, Photography</p>
+                      <a href="../../common-files/images/gallery/16.jpg" class="magnific btn button-line button-white btn-rounded hover-effect">ZOOM</a>
+                      <a href="portfolio-single-fixed-text.html" class="btn button-line button-white btn-rounded hover-effect">SEE MORE</a>
+                    </div>
+                  </div>
+                </figcaption>
+            </figure>
+          </div>
+        </div>    
+      </section>
+      <!-- End Portfolio Boxed 3 columns no Space --><!-- Begin Call to Action Newsletter -->
+      <section class="section-call-action newsletter" style="margin-bottom:20px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <h4 class="section-title">Subscribe to our Monthly Newsletter.</h4>
+              <p class="section-title c-gray">You'll receive updates about our project and semi-nomad tips . We will not share your email.</p>
+            </div>
+            <div class="col-md-5">
+              <div class="inline-form">
+                <input placeholder="Enter Your Email" class="form-control placeholder" type="text">
+                <button type="submit" class="btn btn-lg m-b-0 btn-dark">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Call to Action Newsletter --><!-- Begin Contact Map Bottom Dark -->
+      <section class="section-contact contact-wrap bg-dark">
+        <div class="container p-t-60 p-b-60 center animated" data-animation="fadeIn" data-animation-delay="500">
+          <div class="center section-title">
+            <h3 id="contact" class="section-title">Contact Us<br></h3>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <form class="contact-form support-form">
+                <input id="name" class="input-field form-item field-name placeholder" type="text" required="required" name="contact-name" placeholder="Name">
+                <input id="email" class="input-field form-item field-email placeholder" type="text" required="required" name="contact-email" placeholder="Email">
+                <input id="subject" class="input-field form-item field-subject placeholder" type="text" required="required" name="contact-subject" placeholder="Subject">
+                <textarea id="message" class="textarea-field form-item field-message placeholder" rows="5" name="contact-message" placeholder="Message"></textarea>
+                <button type="submit" class="button-line btn button-white btn-rounded hover-effect m-t-30">Send message</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <h4 style="text-align: left;">Join Our Project</h4>
+              <p class="m-t-10" style="text-align: left;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu sem ante. Nullam quis risus eu purus commodo dignissim. Donec iaculis ac ex vel posuere. Sed posuere, elit vitae mattis condimentum, quam urna.
+              </p>
+              <br>
+              <p style="text-align: left;">
+                Nec minus feminae quoque calamitatum participes fuere similium. nam ex hoc quoque sexu peremptae sunt originis altae conplures, adulteriorum flagitiis obnoxiae vel stuprorum. inter quas notiores fuere Claritas et Flaviana, quarum altera cum duceretur ad mortem, indumento, quo vestita erat, abrepto rmissa est. ideoque carnifex nefas admisisse convictus inmane, vivus exustus est.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Map Bottom Dark --><!-- Begin Footer Social -->
+      <div class="section-footer footer-wrap">
+        <div class="container footer center">
+          <div class="row">
+            <div class="col-lg-12">
+              <h4 class="footer-title">
+                <!-- Footer Title -->
+                <a class="site-name" href="#"><img src="../../common-files/images/logo-mft-dark-medium.png" alt="logo" class="animated fadeInUp" data-animation="fadeInUp" data-animation-delay="200"></a>
+              </h4>
+              <!-- Social Links -->
+              <div class="social-icons">
+                <ul>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="200"><i class="fa fa-facebook-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="300"><i class="fa fa-twitter-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="400"><i class="fa fa-google-plus-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="500"><i class="fa fa-pinterest-square"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="600"><i class="fa fa-flickr"></i></a></li>
+                  <li><a href="#" class="animated" data-animation="fadeIn" data-animation-delay="700"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer Social --><!-- Begin Copyright Light -->
+      <div class="section-copyright">
+        <div class="container">
+          <p class=" center">Modern Family Tribe All rights reserved © 2021</p>
+        </div>
+      </div>
+      <!-- End Copyright Light --></div></body>  <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+  <script src="../../common-files/plugins/jquery/jquery-1.11.1.min.js"></script>
+  <script src="../../common-files/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="../../common-files/plugins/modernizr/modernizr.js"></script>
+  <script src="../../common-files/plugins/appear/jquery.appear.js"></script>
+  <script src="../../common-files/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.js"></script>
+  <!-- BEGIN PAGE SCRIPTS -->
+  <script src="../../common-files/plugins/backstretch/backstretch.min.js"></script>
+  <script src="../../common-files/plugins/parallax/scripts/jquery.parallax-1.1.3.js"></script>
+  <script src="../../common-files/plugins/bxslider/jquery.bxslider.min.js"></script>
+  <script src="../../common-files/plugins/owl/owl.carousel.min.js"></script>
+  <script src="../../common-files/plugins/text-rotator/jquery.simple-text-rotator.min.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/classie.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/svganimations.js"></script>
+  <script src="../../common-files/plugins/video/jquery.mb.YTPlayer.min.js"></script>
+  <script src="../../common-files/plugins/magnific/jquery.magnific-popup.min.js"></script>
+  <script src="../../common-files/plugins/rateit/jquery.rateit.min.js"></script> 
+  <script src="../../common-files/js/ecommerce.js"></script>
+  <script src="../../common-files/plugins/video/jquery.fitvids.js"></script>
+  <script src="../../common-files/plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="../../common-files/plugins/animated-background/demo-2.js"></script>
+  <script src="../../common-files/plugins/slider-revolution/examples/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
+  <script src="../../common-files/plugins/slider-revolution/examples/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="../../common-files/js/slider-revolution.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/classie.js"></script>
+  <script src="../../common-files/plugins/drawing-svg/svganimations.js"></script>
+  <script src="../../common-files/plugins/smart-menu/jquery.smartmenus.min.js"></script>
+  <!-- END PAGE SCRIPTS -->
+<script src="../../common-files/js/application.js"></script>
+</body>
+</html>
